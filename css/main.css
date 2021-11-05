@@ -23,6 +23,7 @@
   font-weight: semiBold;
   font-style: normal;
 }
+
 @font-face {
   font-family: "VisitDenmark";
   src: url("/fonts/VisitDenmark-Bold.otf");
@@ -45,6 +46,7 @@ html {
   width: 100%;
   font-weight: medium;
   color: #000c17;
+  text-decoration: none;
 }
 
 body {
@@ -213,6 +215,7 @@ button {
   background-color: #ffff;
   color: #022b52;
 }
+
 /* ---------- Welcome page end David ---------- */
 
 /* ---------- First onboarding start David ---------- */
@@ -222,12 +225,15 @@ button {
   color: #022b52;
   padding-bottom: 10%;
 }
+
 .onboarding1-city-images {
   padding-bottom: 10%;
 }
+
 .loader {
   padding-bottom: 5%;
 }
+
 .back-button {
   width: 30%;
   float: left;
@@ -246,6 +252,7 @@ button {
   flex-direction: row;
   justify-content: space-between;
 }
+
 /* ---------- First onboarding end David ---------- */
 
 /* ---------- Second onboarding start David ---------- */
@@ -275,6 +282,7 @@ button {
   font-size: 20px;
   padding-bottom: 10%;
 }
+
 /* ---------- Third onboarding end David ---------- */
 
 /* ---------- Fourth onboarding start David ---------- */
@@ -294,6 +302,7 @@ button {
   background-color: #022b52;
   color: #ffff;
 }
+
 /* ---------- Fourth onboarding end David ---------- */
 
 /* ---------- home page start David ---------- */
@@ -351,7 +360,62 @@ button {
   font-size: 12px;
 }
 
-.filter-icon {
+.order-select {
+  background: transparent;
+  border: none;
+  font-size: 12px;
+  display: block;
+  text-align: left;
+  background: url("/img/icons/Icon\ material-arrow-drop-down.svg") no-repeat right transparent;
+  -webkit-appearance: none;
+  background-position-x: 40px;
+  width: 150px;
+  outline: 0px;
+  padding: 16px 0;
 }
+
+#fetched-placesToEat {
+  display: grid;
+  grid-column-gap: 19px;
+  grid-row-gap: 19px;
+  grid-template-columns: auto auto;
+}
+
+.places-container {}
+
+.img-places {
+  width: 154px;
+  height: 107px;
+}
+
+.places-box {
+  width: 154px;
+  height: 154px;
+  background: #F9F9F9;
+}
+
+.place-description {
+  font-size: 8px;
+  font-weight: medium;
+  text-align: left;
+  line-height: 1px;
+  margin-left: 8px;
+  color: #022B52;
+
+}
+
+.place-title {
+  font-size: 10px;
+  font-weight: bold;
+  text-align: left;
+  line-height: 0px;
+  margin-left: 8px;
+
+
+}
+
+
+
+
 
 /* ---------- Places to Eat page start Marius ---------- */

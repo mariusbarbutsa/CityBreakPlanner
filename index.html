@@ -1,237 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Products</title>
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <meta name="description" content="Product Single Page Application" />
-    <meta name="author" content="Rasmus Cederdorff" />
-    <link rel="stylesheet" href="css/main.css" />
-    <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
-  </head>
 
-  <body onhashchange="pageChange()">
-    <!-- tabbar navigation -->
-    <nav class="tabbar" id="menu">
-      <a href="#home">Home</a>
-      <a href="#bookmarks">Bookmarks</a>
-      <a href="#profile">Profile</a>
-    </nav>
+<head>
+  <meta charset="utf-8" />
+  <title>Products</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="Product Single Page Application" />
+  <meta name="author" content="Rasmus Cederdorff" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+</head>
 
-    <!-- Onboarding pages -->
-    <!-- Welcome page start -->
-    <section id="welcome-page" class="page">
-      <img
-        src="/img/Icon awesome-tripadvisor.png"
-        class="logo-welcome-screen"
-      />
-      <h1 class="welcome-text">
-        Welcome to<br />
-        City Break Planner
-      </h1>
-      <form>
-        <input placeholder="How should we call you?" class="input-onboarding" />
-        <div class="buttons-on-welcome-page">
-          <button
-            class="welcome-page-done-button"
-            type="button"
-            onclick="navigateTo('onboarding-1');"
-          >
-            Done
-          </button>
-          <button
-            class="welcome-page-skip-button"
-            type="button"
-            onclick="navigateTo('onboarding-1');"
-          >
-            Skip
-          </button>
-        </div>
-      </form>
-    </section>
-    <!-- Welcome page end -->
+<body onhashchange="pageChange()">
+  <!-- tabbar navigation -->
+  <nav class="tabbar" id="menu">
+    <a href="#home">Home</a>
+    <a href="#bookmarks">Bookmarks</a>
+    <a href="#profile">Profile</a>
+  </nav>
 
-    <!-- First Onboarding start -->
-    <section id="onboarding-1" class="page">
-      <img
-        src="./img/visitdenmark-logo.png"
-        class="visitdenmark-logo"
-        alt="visit denmark logo"
-      />
-      <h2 class="heading-on-onboarding1">
-        Welcome to Denmark, the land of everyday wonder
-      </h2>
-      <div class="onboarding1-city-images">
-        <img class="city-image" src="./img/aarhus.png" alt="Aarhus" />
-        <img class="city-image" src="./img/copenhagen.png" alt="Copenhagen" />
-        <img class="city-image" src="./img/odense.png" alt="Odense" />
-        <img class="city-image" src="./img/aalborg.png" alt="Aalborg" />
-      </div>
-      <!-- here comes the place for the "loader" -->
-      <img src="./img/loader-1.png" class="loader" alt="loader" />
-      <div class="back-next-button-div-1">
-        <button
-          type="button"
-          class="back-button"
-          onclick="navigateTo('welcome-page');"
-        >
-          Back
+  <!-- Onboarding pages -->
+  <!-- Welcome page start -->
+  <section id="welcome-page" class="page">
+    <img src="/img/Icon awesome-tripadvisor.png" class="logo-welcome-screen" />
+    <h1 class="welcome-text">
+      Welcome to<br />
+      City Break Planner
+    </h1>
+    <form>
+      <input placeholder="How should we call you?" class="input-onboarding" />
+      <div class="buttons-on-welcome-page">
+        <button class="welcome-page-done-button" type="button" onclick="navigateTo('onboarding-1');">
+          Done
         </button>
-        <button
-          type="button"
-          class="next-button"
-          onclick="navigateTo('onboarding-2');"
-        >
-          Next
+        <button class="welcome-page-skip-button" type="button" onclick="navigateTo('onboarding-1');">
+          Skip
         </button>
       </div>
-    </section>
-    <!-- First Onboarding end -->
+    </form>
+  </section>
+  <!-- Welcome page end -->
 
-    <!-- Second Onboarding start -->
-    <section id="onboarding-2" class="page">
-      <img src="./img/onboarding2-image.png" class="onboarding2-image" alt="" />
-      <p class="onboarding2-text">
-        You can start search for activities, <br />places to eat, attractions or
-        events!
-      </p>
-      <!-- here comes the place for the "loader" -->
-      <img src="./img/loader-2.png" class="loader" alt="loader" />
-      <div class="back-next-button-div-2">
-        <button
-          type="button"
-          class="back-button"
-          onclick="navigateTo('onboarding-1');"
-        >
-          Back
-        </button>
-        <button
-          type="button"
-          class="next-button"
-          onclick="navigateTo('onboarding-3');"
-        >
-          Next
-        </button>
+  <!-- First Onboarding start -->
+  <section id="onboarding-1" class="page">
+    <img src="./img/visitdenmark-logo.png" class="visitdenmark-logo" alt="visit denmark logo" />
+    <h2 class="heading-on-onboarding1">
+      Welcome to Denmark, the land of everyday wonder
+    </h2>
+    <div class="onboarding1-city-images">
+      <img class="city-image" src="./img/aarhus.png" alt="Aarhus" />
+      <img class="city-image" src="./img/copenhagen.png" alt="Copenhagen" />
+      <img class="city-image" src="./img/odense.png" alt="Odense" />
+      <img class="city-image" src="./img/aalborg.png" alt="Aalborg" />
+    </div>
+    <!-- here comes the place for the "loader" -->
+    <img src="./img/loader-1.png" class="loader" alt="loader" />
+    <div class="back-next-button-div-1">
+      <button type="button" class="back-button" onclick="navigateTo('welcome-page');">
+        Back
+      </button>
+      <button type="button" class="next-button" onclick="navigateTo('onboarding-2');">
+        Next
+      </button>
+    </div>
+  </section>
+  <!-- First Onboarding end -->
+
+  <!-- Second Onboarding start -->
+  <section id="onboarding-2" class="page">
+    <img src="./img/onboarding2-image.png" class="onboarding2-image" alt="" />
+    <p class="onboarding2-text">
+      You can start search for activities, <br />places to eat, attractions or
+      events!
+    </p>
+    <!-- here comes the place for the "loader" -->
+    <img src="./img/loader-2.png" class="loader" alt="loader" />
+    <div class="back-next-button-div-2">
+      <button type="button" class="back-button" onclick="navigateTo('onboarding-1');">
+        Back
+      </button>
+      <button type="button" class="next-button" onclick="navigateTo('onboarding-3');">
+        Next
+      </button>
+    </div>
+  </section>
+  <!-- Second Onboarding end -->
+
+  <!-- Third Onboarding start -->
+  <section id="onboarding-3" class="page">
+    <img src="./img/onboarding3-image.png" class="onboarding3-image" alt="" />
+    <p class="onboarding3-text">
+      You can search and filter<br />
+      The search results, to find<br />
+      The perfect match.
+    </p>
+    <!-- here comes the place for the "loader" -->
+    <img src="./img/loader-3.png" class="loader" alt="loader" />
+    <div class="back-next-button-div-3">
+      <button type="button" class="back-button" onclick="navigateTo('onboarding-2');">
+        Back
+      </button>
+      <button type="button" class="next-button" onclick="navigateTo('onboarding-4');">
+        Next
+      </button>
+    </div>
+  </section>
+  <!-- Third Onboarding end -->
+
+  <!-- Fourth Onboarding start -->
+  <section id="onboarding-4" class="page">
+    <img src="./img/onboarding4-image.png" class="onboarding3-image" alt="" />
+    <p class="onboarding4-text">
+      You can add the favourite ones to your calendar.
+    </p>
+    <!-- here comes the place for the "loader" -->
+    <img src="./img/loader-4.png" class="loader" alt="loader" />
+    <div class="back-next-button-div-4">
+      <button type="button" class="get-started-button" onclick="navigateTo('home'); showMenu();">
+        Get started
+      </button>
+    </div>
+  </section>
+  <!-- Fourth Onboarding end -->
+
+  <!-- home page -->
+  <section id="home" class="page">
+    <header class="topbar">
+      <h2>Products</h2>
+    </header>
+    <input type="search" placeholder="Explore" onkeyup="search(this.value)" />
+    <!-- <button type="button" name="button" onclick="hideOutOfStock()">Hide out of stock</button> -->
+    <section id="products-container"></section>
+  </section>
+
+  <!-- places to eat page -->
+  <section id="placestoeat" class="page">
+    <div class="container-placestoeat">
+      <div class="flexbox-placestoeat-header">
+        <img class="back-icon" src="/img/icons/back-icon.svg" alt="back icon" />
+        <p class="header-placestoeat">
+          Places to eat in <span class="red">Aarhus</span>
+        </p>
       </div>
-    </section>
-    <!-- Second Onboarding end -->
-
-    <!-- Third Onboarding start -->
-    <section id="onboarding-3" class="page">
-      <img src="./img/onboarding3-image.png" class="onboarding3-image" alt="" />
-      <p class="onboarding3-text">
-        You can search and filter<br />
-        The search results, to find<br />
-        The perfect match.
-      </p>
-      <!-- here comes the place for the "loader" -->
-      <img src="./img/loader-3.png" class="loader" alt="loader" />
-      <div class="back-next-button-div-3">
-        <button
-          type="button"
-          class="back-button"
-          onclick="navigateTo('onboarding-2');"
-        >
-          Back
-        </button>
-        <button
-          type="button"
-          class="next-button"
-          onclick="navigateTo('onboarding-4');"
-        >
-          Next
-        </button>
+      <div class="explore-flexbox">
+        <input placeholder="Explore" class="explore-search" onkeyup="searchPlacesToEat(this.value)" />
+        <img class="filter-icon" src="/img/icons/filter-icon.svg" alt="filter icon" />
       </div>
-    </section>
-    <!-- Third Onboarding end -->
+      <select id="sortBy" onchange="orderBy(this.value)" class="order-select">
+        <option value="latest" selected>Latest</option>
+        <option value="oldest">Oldest</option>
+      </select>
 
-    <!-- Fourth Onboarding start -->
-    <section id="onboarding-4" class="page">
-      <img src="./img/onboarding4-image.png" class="onboarding3-image" alt="" />
-      <p class="onboarding4-text">
-        You can add the favourite ones to your calendar.
-      </p>
-      <!-- here comes the place for the "loader" -->
-      <img src="./img/loader-4.png" class="loader" alt="loader" />
-      <div class="back-next-button-div-4">
-        <button
-          type="button"
-          class="get-started-button"
-          onclick="navigateTo('home'); showMenu();"
-        >
-          Get started
-        </button>
-      </div>
-    </section>
-    <!-- Fourth Onboarding end -->
+      <section id="fetched-placesToEat"></section>
+    </div>
+  </section>
 
-    <!-- home page -->
-    <section id="home" class="page">
-      <header class="topbar">
-        <h2>Products</h2>
-      </header>
-      <input type="search" placeholder="Explore" onkeyup="search(this.value)" />
-      <!-- <button type="button" name="button" onclick="hideOutOfStock()">Hide out of stock</button> -->
-      <section id="products-container"></section>
-    </section>
+  <!-- bookmarks page -->
+  <section id="bookmarks" class="page">
+    <header class="topbar">
+      <h2>Add New Product</h2>
+    </header>
+    <form>
+      <input id="brand" type="text" name="brand" placeholder="Brand" />
+      <input id="model" type="text" name="model" placeholder="Model" />
+      <input id="price" type="text" name="price" placeholder="Price" />
+      <input id="img" type="text" name="img" placeholder="Image URL" />
+      <button type="button" name="button" onclick="addNewProduct()">
+        Save
+      </button>
+    </form>
+  </section>
 
-    <!-- places to eat page -->
-    <section id="placestoeat" class="page">
-      <div class="container-placestoeat">
-        <div class="flexbox-placestoeat-header">
-          <img
-            class="back-icon"
-            src="/img/icons/back-icon.svg"
-            alt="back icon"
-          />
-          <p class="header-placestoeat">
-            Places to eat in <span class="red">Aarhus</span>
-          </p>
-        </div>
-        <div class="explore-flexbox">
-          <input
-            type="search"
-            placeholder="Explore"
-            class="explore-search"
-            onkeyup="search(this.value)"
-          />
-          <img
-            class="filter-icon"
-            src="/img/icons/filter-icon.svg"
-            alt="filter icon"
-          />
-        </div>
+  <!-- Profile page -->
+  <section id="profile" class="page"></section>
 
-        <section id="fetched-placesToEat"></section>
-      </div>
-    </section>
+  <!-- SPA functionality  -->
+  <script src="/js/spa.js"></script>
+  <!-- main js file -->
+  <script src="js/main.js"></script>
+  <script src="/js/router.js"></script>
+</body>
 
-    <!-- bookmarks page -->
-    <section id="bookmarks" class="page">
-      <header class="topbar">
-        <h2>Add New Product</h2>
-      </header>
-      <form>
-        <input id="brand" type="text" name="brand" placeholder="Brand" />
-        <input id="model" type="text" name="model" placeholder="Model" />
-        <input id="price" type="text" name="price" placeholder="Price" />
-        <input id="img" type="text" name="img" placeholder="Image URL" />
-        <button type="button" name="button" onclick="addNewProduct()">
-          Save
-        </button>
-      </form>
-    </section>
-
-    <!-- Profile page -->
-    <section id="profile" class="page"></section>
-
-    <!-- SPA functionality  -->
-    <script src="/js/spa.js"></script>
-    <!-- main js file -->
-    <script src="js/main.js"></script>
-    <script src="/js/router.js"></script>
-  </body>
 </html>
