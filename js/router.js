@@ -77,3 +77,16 @@ function setActiveTab(pathname) {
     }
   }
 }
+
+let cUrl = window.location.href;
+let tabbar = document.querySelector(".tabbar");
+if (
+  cUrl.indexOf("welcome-page") != -1 ||
+  cUrl.indexOf("onboarding-1") != -1 ||
+  cUrl.indexOf("onboarding-2") != -1 ||
+  cUrl.indexOf("onboarding-3") != -1 ||
+  cUrl.indexOf("onboarding-4") != -1) {
+  tabbar.style.display = "flex";
+} else {
+  tabbar.style.display = "block";
+}
