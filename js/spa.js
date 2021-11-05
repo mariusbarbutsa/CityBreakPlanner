@@ -35,7 +35,7 @@ function navigateTo(pageId) {
 // set default page or given page by the hash url
 // function is called 'onhashchange'
 function pageChange() {
-  let page = "products";
+  let page = "welcome-page";
   if (location.hash) {
     page = location.hash.slice(1);
   }
@@ -43,3 +43,11 @@ function pageChange() {
 }
 
 pageChange(); // called by default when the app is loaded for the first time
+
+let cUrl = window.location.href;
+let tabbar = window.querySelector('.tabbar');
+if (cUrl.indexOf("welcome-page") != -1) {
+  tabbar.style.display = "flex";
+} else {
+  tabbar.style.display = "none";
+}

@@ -9,12 +9,14 @@ let _products = [];
 /*
 Fetches json data from the file products.json
 */
-fetch('json/products.json')
+
+/*
+fetch("json/products.json")
   .then(function (response) {
     return response.json();
   })
   .then(function (data) {
-    _products = data
+    _products = data;
     appendProducts(_products);
   });
 
@@ -34,3 +36,5 @@ function search(value) {
 function hideOutOfStock() {
   // to do
 }
+
+*/
