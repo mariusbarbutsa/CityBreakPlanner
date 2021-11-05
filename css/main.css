@@ -13,38 +13,38 @@
 @font-face {
   font-family: "VisitDenmark";
   src: url("/fonts/VisitDenmark-Regular.otf");
-  font-weight: regular;
-  font-style: regular;
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
   font-family: "VisitDenmark";
   src: url("/fonts/VisitDenmark-SemiBold.otf");
-  font-weight: semibold;
-  font-style: semibold;
+  font-weight: semiBold;
+  font-style: normal;
 }
 @font-face {
   font-family: "VisitDenmark";
   src: url("/fonts/VisitDenmark-Bold.otf");
   font-weight: bold;
-  font-style: bold;
+  font-style: normal;
 }
 
 @font-face {
   font-family: "VisitDenmark";
   src: url("/fonts/VisitDenmark-Medium.otf");
   font-weight: medium;
-  font-style: medium;
+  font-style: normal;
 }
 
 /* ---------- general styling ---------- */
 html {
-  color: var(--text-color-dark);
   font-family: "VisitDenmark", Helvetica, Arial, sans-serif;
   height: 100%;
   text-align: center;
   width: 100%;
   font-weight: medium;
+  color: #000c17;
 }
 
 body {
@@ -313,5 +313,29 @@ input {
 /* ---------- home page end David ---------- */
 
 /* ---------- Places to Eat page start Marius ---------- */
+
+.container-placestoeat {
+  width: 327px;
+  margin: 0 auto;
+}
+
+.flexbox-placestoeat-header {
+  display: flex;
+  flex-direction: row;
+}
+
+.back-icon {
+  margin-right: 12px;
+}
+
+.header-placestoeat {
+  font-size: 20px;
+  font-weight: normal;
+}
+
+.red {
+  color: #e70013;
+  font-weight: bold;
+}
 
 /* ---------- Places to Eat page start Marius ---------- */
