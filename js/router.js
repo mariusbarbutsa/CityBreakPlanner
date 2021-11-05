@@ -10,6 +10,7 @@ const routes = {
   "#/onboarding-3": "onboarding-3",
   "#/onboarding-4": "onboarding-4",
   "#/home": "home",
+  "#/placestoeat": "placestoeat",
   "#/bookmarks": "bookmarks",
   "#/profile": "profile",
 };
@@ -83,7 +84,8 @@ let tabbar = document.querySelector(".tabbar");
 if (
   cUrl.indexOf("home") != -1 ||
   cUrl.indexOf("bookmarks") != -1 ||
-  cUrl.indexOf("profile") != -1) {
+  cUrl.indexOf("profile") != -1
+) {
   tabbar.style.display = "block";
 } else {
   tabbar.style.display = "none";
@@ -94,4 +96,4 @@ function showMenu() {
   if ((navBar.style.display = "none")) {
     navBar.style.display = "block";
   }
-};
+}

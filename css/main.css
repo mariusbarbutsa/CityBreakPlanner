@@ -9,14 +9,42 @@
   --text-color-in-stock: rgb(78, 255, 158);
 }
 
+/*--------------fonts--------------*/
+@font-face {
+  font-family: "VisitDenmark";
+  src: url("/fonts/VisitDenmark-Regular.otf");
+  font-weight: regular;
+  font-style: regular;
+}
+
+@font-face {
+  font-family: "VisitDenmark";
+  src: url("/fonts/VisitDenmark-SemiBold.otf");
+  font-weight: semibold;
+  font-style: semibold;
+}
+@font-face {
+  font-family: "VisitDenmark";
+  src: url("/fonts/VisitDenmark-Bold.otf");
+  font-weight: bold;
+  font-style: bold;
+}
+
+@font-face {
+  font-family: "VisitDenmark";
+  src: url("/fonts/VisitDenmark-Medium.otf");
+  font-weight: medium;
+  font-style: medium;
+}
+
 /* ---------- general styling ---------- */
 html {
   color: var(--text-color-dark);
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "VisitDenmark", Helvetica, Arial, sans-serif;
   height: 100%;
   text-align: center;
   width: 100%;
-  font-weight: 200;
+  font-weight: medium;
 }
 
 body {
@@ -175,9 +203,9 @@ input {
   color: #022b52;
 }
 
-.input-onboarding{
+.input-onboarding {
   border: 1px solid #f9f9f9;
-  background-color: #F9F9F9;
+  background-color: #f9f9f9;
   margin-bottom: 15%;
   margin-top: 10%;
   width: 85%;
@@ -185,7 +213,7 @@ input {
 
 .buttons-on-welcome-page {
   padding-top: 20%;
-  background-image: url('/img/background-onboarding.png');
+  background-image: url("/img/background-onboarding.png");
 }
 
 .welcome-page-done-button {
@@ -284,3 +312,6 @@ input {
 
 /* ---------- home page end David ---------- */
 
+/* ---------- Places to Eat page start Marius ---------- */
+
+/* ---------- Places to Eat page start Marius ---------- */

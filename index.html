@@ -3,7 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <title>Products</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
     <meta name="description" content="Product Single Page Application" />
     <meta name="author" content="Rasmus Cederdorff" />
     <link rel="stylesheet" href="css/main.css" />
@@ -12,7 +15,7 @@
 
   <body onhashchange="pageChange()">
     <!-- tabbar navigation -->
-    <nav class="tabbar" id="menu"> 
+    <nav class="tabbar" id="menu">
       <a href="#home">Home</a>
       <a href="#bookmarks">Bookmarks</a>
       <a href="#profile">Profile</a>
@@ -21,22 +24,46 @@
     <!-- Onboarding pages -->
     <!-- Welcome page start -->
     <section id="welcome-page" class="page">
-      <img src="/img/Icon awesome-tripadvisor.png" class="logo-welcome-screen" />
-      <h1 class="welcome-text">Welcome to<br /> City Break Planner</h1>
+      <img
+        src="/img/Icon awesome-tripadvisor.png"
+        class="logo-welcome-screen"
+      />
+      <h1 class="welcome-text">
+        Welcome to<br />
+        City Break Planner
+      </h1>
       <form>
         <input placeholder="How should we call you?" class="input-onboarding" />
-       <div class="buttons-on-welcome-page">
-          <button class="welcome-page-done-button" type="button" onclick="navigateTo('#/onboarding-1');">Done</button>
-          <button class="welcome-page-skip-button" type="button" onclick="navigateTo('#/onboarding-1');">Skip</button>
-       </div>
+        <div class="buttons-on-welcome-page">
+          <button
+            class="welcome-page-done-button"
+            type="button"
+            onclick="navigateTo('#/onboarding-1');"
+          >
+            Done
+          </button>
+          <button
+            class="welcome-page-skip-button"
+            type="button"
+            onclick="navigateTo('#/onboarding-1');"
+          >
+            Skip
+          </button>
+        </div>
       </form>
     </section>
     <!-- Welcome page end -->
 
     <!-- First Onboarding start -->
     <section id="onboarding-1" class="page">
-      <img src="./img/visitdenmark-logo.png" class="visitdenmark-logo" alt="visit denmark logo"/>
-      <h2 class="heading-on-onboarding1"> Welcome to Denmark, the land of everyday wonder</h2>
+      <img
+        src="./img/visitdenmark-logo.png"
+        class="visitdenmark-logo"
+        alt="visit denmark logo"
+      />
+      <h2 class="heading-on-onboarding1">
+        Welcome to Denmark, the land of everyday wonder
+      </h2>
       <div class="onboarding1-city-images">
         <img class="city-image" src="./img/aarhus.png" alt="Aarhus" />
         <img class="city-image" src="./img/copenhagen.png" alt="Copenhagen" />
@@ -46,8 +73,20 @@
       <!-- here comes the place for the "loader" -->
       <img src="./img/loader-1.png" class="loader" alt="loader" />
       <div class="back-next-button-div-1">
-        <button type="button" class="back-button" onclick="navigateTo('#/welcome-page');">Back</button>
-        <button type="button" class="next-button" onclick="navigateTo('#/onboarding-2');">Next</button>
+        <button
+          type="button"
+          class="back-button"
+          onclick="navigateTo('#/welcome-page');"
+        >
+          Back
+        </button>
+        <button
+          type="button"
+          class="next-button"
+          onclick="navigateTo('#/onboarding-2');"
+        >
+          Next
+        </button>
       </div>
     </section>
     <!-- First Onboarding end -->
@@ -55,12 +94,27 @@
     <!-- Second Onboarding start -->
     <section id="onboarding-2" class="page">
       <img src="./img/onboarding2-image.png" class="onboarding2-image" alt="" />
-      <p class="onboarding2-text">You can start search for activities, <br />places to eat, attractions or events!</p>
+      <p class="onboarding2-text">
+        You can start search for activities, <br />places to eat, attractions or
+        events!
+      </p>
       <!-- here comes the place for the "loader" -->
       <img src="./img/loader-2.png" class="loader" alt="loader" />
       <div class="back-next-button-div-2">
-        <button type="button" class="back-button" onclick="navigateTo('#/onboarding-1');">Back</button>
-        <button type="button" class="next-button" onclick="navigateTo('#/onboarding-3');">Next</button>
+        <button
+          type="button"
+          class="back-button"
+          onclick="navigateTo('#/onboarding-1');"
+        >
+          Back
+        </button>
+        <button
+          type="button"
+          class="next-button"
+          onclick="navigateTo('#/onboarding-3');"
+        >
+          Next
+        </button>
       </div>
     </section>
     <!-- Second Onboarding end -->
@@ -76,8 +130,20 @@
       <!-- here comes the place for the "loader" -->
       <img src="./img/loader-3.png" class="loader" alt="loader" />
       <div class="back-next-button-div-3">
-        <button type="button" class="back-button" onclick="navigateTo('#/onboarding-2');">Back</button>
-        <button type="button" class="next-button" onclick="navigateTo('#/onboarding-4');">Next</button>
+        <button
+          type="button"
+          class="back-button"
+          onclick="navigateTo('#/onboarding-2');"
+        >
+          Back
+        </button>
+        <button
+          type="button"
+          class="next-button"
+          onclick="navigateTo('#/onboarding-4');"
+        >
+          Next
+        </button>
       </div>
     </section>
     <!-- Third Onboarding end -->
@@ -91,7 +157,13 @@
       <!-- here comes the place for the "loader" -->
       <img src="./img/loader-4.png" class="loader" alt="loader" />
       <div class="back-next-button-div-4">
-        <button type="button" class="get-started-button" onclick="navigateTo('#/home'); showMenu();">Get started</button>
+        <button
+          type="button"
+          class="get-started-button"
+          onclick="navigateTo('#/home'); showMenu();"
+        >
+          Get started
+        </button>
       </div>
     </section>
     <!-- Fourth Onboarding end -->
@@ -104,6 +176,20 @@
       <input type="search" placeholder="Search" onkeyup="search(this.value)" />
       <!-- <button type="button" name="button" onclick="hideOutOfStock()">Hide out of stock</button> -->
       <section id="products-container"></section>
+    </section>
+
+    <!-- places to eat page -->
+    <section id="placestoeat" class="page">
+      <div class="container-placestoeat">
+        <p header-placestoeat>Places to eat in <span>Aarhus</span></p>
+        <input
+          type="search"
+          placeholder="Search"
+          onkeyup="search(this.value)"
+        />
+
+        <section id="fetched-placesToEat"></section>
+      </div>
     </section>
 
     <!-- bookmarks page -->
