@@ -38,14 +38,14 @@
           <button
             class="welcome-page-done-button"
             type="button"
-            onclick="navigateTo('#/onboarding-1');"
+            onclick="navigateTo('onboarding-1');"
           >
             Done
           </button>
           <button
             class="welcome-page-skip-button"
             type="button"
-            onclick="navigateTo('#/onboarding-1');"
+            onclick="navigateTo('onboarding-1');"
           >
             Skip
           </button>
@@ -76,14 +76,14 @@
         <button
           type="button"
           class="back-button"
-          onclick="navigateTo('#/welcome-page');"
+          onclick="navigateTo('welcome-page');"
         >
           Back
         </button>
         <button
           type="button"
           class="next-button"
-          onclick="navigateTo('#/onboarding-2');"
+          onclick="navigateTo('onboarding-2');"
         >
           Next
         </button>
@@ -104,14 +104,14 @@
         <button
           type="button"
           class="back-button"
-          onclick="navigateTo('#/onboarding-1');"
+          onclick="navigateTo('onboarding-1');"
         >
           Back
         </button>
         <button
           type="button"
           class="next-button"
-          onclick="navigateTo('#/onboarding-3');"
+          onclick="navigateTo('onboarding-3');"
         >
           Next
         </button>
@@ -133,14 +133,14 @@
         <button
           type="button"
           class="back-button"
-          onclick="navigateTo('#/onboarding-2');"
+          onclick="navigateTo('onboarding-2');"
         >
           Back
         </button>
         <button
           type="button"
           class="next-button"
-          onclick="navigateTo('#/onboarding-4');"
+          onclick="navigateTo('onboarding-4');"
         >
           Next
         </button>
@@ -160,7 +160,7 @@
         <button
           type="button"
           class="get-started-button"
-          onclick="navigateTo('#/home'); showMenu();"
+          onclick="navigateTo('home'); showMenu();"
         >
           Get started
         </button>
@@ -173,7 +173,7 @@
       <header class="topbar">
         <h2>Products</h2>
       </header>
-      <input type="search" placeholder="Search" onkeyup="search(this.value)" />
+      <input type="search" placeholder="Explore" onkeyup="search(this.value)" />
       <!-- <button type="button" name="button" onclick="hideOutOfStock()">Hide out of stock</button> -->
       <section id="products-container"></section>
     </section>
@@ -191,11 +191,19 @@
             Places to eat in <span class="red">Aarhus</span>
           </p>
         </div>
-        <input
-          type="search"
-          placeholder="Search"
-          onkeyup="search(this.value)"
-        />
+        <div class="explore-flexbox">
+          <input
+            type="search"
+            placeholder="Explore"
+            class="explore-search"
+            onkeyup="search(this.value)"
+          />
+          <img
+            class="filter-icon"
+            src="/img/icons/filter-icon.svg"
+            alt="filter icon"
+          />
+        </div>
 
         <section id="fetched-placesToEat"></section>
       </div>
