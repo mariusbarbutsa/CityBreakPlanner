@@ -59,6 +59,10 @@ h1 {
   letter-spacing: 3px;
 }
 
+.black {
+  color: #000c17 !important;
+}
+
 /* ---------- topbar styling ---------- */
 .topbar {
   background-color: var(--green);
@@ -84,7 +88,7 @@ h1 {
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 9999;
+  z-index: 99999999;
   display: none;
 }
 
@@ -120,7 +124,7 @@ h1 {
   background: var(--light-grey);
   animation: fadeIn 0.4s;
   /* padding equals height of tabbar and topbar */
-  padding: 55px 0;
+  padding-bottom: 55px;
 }
 
 /* ---------- logo styling ---------- */
@@ -166,7 +170,7 @@ form {
   margin: auto;
 }
 
-button {
+.btn {
   font-weight: 200;
   text-align: center;
   cursor: pointer;
@@ -311,9 +315,37 @@ button {
 
 /* ---------- Places to Eat page start Marius ---------- */
 
+
+.sticky-header {
+  background: white;
+  position: fixed;
+  left: 0px;
+  right: 24px;
+  padding-bottom: 16px;
+  padding-top: 24px;
+  width: 100%;
+}
+
+.sticky-header-width {
+  width: 327px;
+  margin: 0 auto;
+}
+
+.shadow {
+  box-shadow: -2px 39px 99px 0px rgba(2, 43, 82, 0.14);
+  -webkit-box-shadow: -2px 39px 99px 0px rgba(2, 43, 82, 0.14);
+  -moz-box-shadow: -2px 39px 99px 0px rgba(2, 43, 82, 0.14);
+}
+
+.content-box {
+  padding-top: 126px;
+}
+
+
 .container-placestoeat {
   width: 327px;
   margin: 0 auto;
+  top: 0;
 }
 
 .flexbox-placestoeat-header {
@@ -327,12 +359,12 @@ button {
 
 .header-placestoeat {
   font-size: 20px;
-  font-weight: normal;
+  font-family: VisitDenmark Regular;
 }
 
 .red {
   color: #e70013;
-  font-weight: bold;
+  font-family: VisitDenmark SemiBold;
 }
 
 .explore-flexbox {
@@ -396,7 +428,7 @@ button {
 
 .place-description {
   font-size: 8px;
-  font-weight: medium;
+  font-family: VisitDenmark Medium;
   text-align: left;
   line-height: 1px;
   margin-left: 8px;
@@ -406,13 +438,179 @@ button {
 
 .place-title {
   font-size: 10px;
-  font-weight: bold;
+  font-family: VisitDenmark Medium;
   text-align: left;
   line-height: 0px;
   margin-left: 8px;
+}
 
+.filter-slider {
+  height: 100%;
+  width: 100%;
+  left: 100%;
+  position: fixed;
+  overflow: hidden;
+  transition: 0.7s;
+  background: white;
+  z-index: 999999;
+  text-align: left;
+}
+
+.filter-content {
+  margin: 0 auto;
+  margin-top: 24px;
+  margin-left: 24px;
+}
+
+.filter-title {
+  font-size: 20px;
+  font-family: VisitDenmark SemiBold;
+  line-height: 0px;
+}
+
+.filter-horizontal-scrolling {
+  width: 100%;
+  overflow: auto;
+  white-space: nowrap;
+  margin-top: 2px;
+  display: block;
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
 
 }
+
+.filter-horizontal-scrolling::-webkit-scrollbar {
+  display: none;
+}
+
+
+
+.filter-horizontal-scrolling .filter-by-type {
+  display: inline-block;
+  width: 94px;
+  height: 94px;
+  background: #F9F9F9;
+  margin-right: 16px;
+  position: relative;
+}
+
+.filter-label {
+  font-family: VisitDenmark Medium;
+  font-size: 12px;
+  line-height: 12px;
+  position: absolute;
+  top: 70px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  white-space: pre-wrap;
+  color: white;
+  margin: 0 auto;
+  text-align: center;
+  align-items: center;
+  width: 100%;
+}
+
+.button-filter {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  text-decoration: none;
+  webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.subCategory-image {
+  background-color: #F9F9F9;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(50%);
+  opacity: 0.4;
+}
+
+.active-type {
+  background: rgb(2, 43, 82, 0.55) !important;
+}
+
+.active-type-all {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border: 1px solid #335372;
+  background: #F9F9F9 !important;
+}
+
+.filter-by-something {
+  display: grid;
+  grid-column-gap: 13px;
+  grid-row-gap: 16px;
+  grid-template-columns: auto auto;
+  margin-right: 24px;
+}
+
+.filter-by-something-box {
+  background-color: #F9F9F9;
+  font-family: VisitDenmark Regular;
+  font-size: 12px;
+  text-align: center;
+  /* padding: 8.5px 0; */
+  width: 157px;
+  height: 32px;
+  border: none;
+}
+
+.filter-title-2 {
+  font-size: 20px;
+  font-family: VisitDenmark SemiBold;
+  line-height: 0px;
+  margin-top: 32px;
+}
+
+.active-filter {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border: 1px solid #335372;
+  background: #F9F9F9 !important;
+}
+
+.filter-cta-buttons {
+  margin-top: 290px;
+  margin-right: 24px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.reset-button {
+  background-color: #F9F9F9;
+  font-family: VisitDenmark Medium;
+  font-size: 16px;
+  text-align: center;
+  padding: 15px 0;
+  width: 157px;
+  border: none;
+}
+
+.apply-button {
+  background-color: #022B52;
+  font-family: VisitDenmark Medium;
+  font-size: 16px;
+  text-align: center;
+  padding: 15px 0;
+  width: 157px;
+  border: none;
+  color: white !important;
+}
+
+
+
 
 
 

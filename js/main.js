@@ -5,6 +5,7 @@
 global variables: _products _selectedProductId
 */
 let _places = [];
+let _categories = [];
 let _selectedProductId;
 
 /*
@@ -14,9 +15,19 @@ async function fetchData() {
   const response = await fetch('json/data.json');
   const data = await response.json();
   _places = data;
-  _places.length = 100;
+  _places.length = 200;
   orderByLatest();
   // appendPlacesToEat(_places);
+  // showLoader(false);
+}
+
+fetchData();
+
+async function fetchCategories() {
+  const response = await fetch('json/categories.json');
+  const data = await response.json();
+  _categories = data;
+
   // showLoader(false);
 }
 
@@ -43,6 +54,7 @@ function appendPlacesToEat(placesToEat) {
   }
   document.querySelector('#fetched-placesToEat').innerHTML = htmlTemplate;
 }
+
 
 function filterByPlacesToEat() {
   const results = _places.filter(
@@ -100,6 +112,74 @@ function searchPlacesToEat(value) {
   appendPlacesToEat(filteredProducts);
 }
 
+function openFilter() {
+
+}
+
+
+function filterByType(value) {
+  const buttons = document.querySelectorAll(
+    ".filter-horizontal-scrolling .filter-by-type"
+  );
+  const buttons2 = document.querySelector(
+    ".allBtn"
+  );
+  if (value === buttons2.getAttribute("id")) {
+    buttons2.classList.add("active-type-all");
+  }
+
+  for (const button of buttons) {
+    if (value === button.getAttribute("id")) {
+      button.classList.add("active-type");
+    } else {
+      button.classList.remove("active-type");
+      button.classList.remove("active-type-all");
+    }
+  }
+
+  if (value == "all") {
+    orderByLatest();
+  } else {
+    const results = _places.filter(
+      (place) => place.MainCategory.Name == "Places to eat"
+    );
+    const results2 = results.filter(
+      (place) => place.Category.Name == value
+    );
+    results2.sort((product1, product2) => {
+      return product1.Modified.localeCompare(product2.Modified);
+    });
+    appendPlacesToEat(results2);
+    console.log(results);
+    console.log(results2);
+  }
+}
+
+function filterBySomething(value) {
+  const buttons = document.querySelectorAll(
+    ".filter-by-something .filter-by-something-box"
+  );
+
+  for (const button of buttons) {
+    if (value === button.getAttribute("id")) {
+      button.classList.add("active-filter");
+    } else {
+      button.classList.remove("active-filter");
+    }
+  }
+
+}
+
+function getBackFilter() {
+  let back = document.querySelector(".filter-slider");
+  back.style.left = "100%";
+}
+
+function openFilter() {
+  let back = document.querySelector(".filter-slider");
+  back.style.left = "0";
+}
+
 
 
 
@@ -139,3 +219,13 @@ function showDetailView(id) {
     </article>
   `;
 }
+
+window.onscroll = function () {
+  var navbar = document.querySelector(".sticky-header");
+  var sticky = navbar.offsetTop;
+  if (window.pageYOffset > sticky) {
+    navbar.classList.add("shadow")
+  } else {
+    navbar.classList.remove("shadow");
+  }
+};

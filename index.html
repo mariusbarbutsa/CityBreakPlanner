@@ -30,10 +30,10 @@
     <form>
       <input placeholder="How should we call you?" class="input-onboarding" />
       <div class="buttons-on-welcome-page">
-        <button class="welcome-page-done-button" type="button" onclick="navigateTo('onboarding-1');">
+        <button class="welcome-page-done-button btn" type="button" onclick="navigateTo('onboarding-1');">
           Done
         </button>
-        <button class="welcome-page-skip-button" type="button" onclick="navigateTo('onboarding-1');">
+        <button class="welcome-page-skip-button btn" type="button" onclick="navigateTo('onboarding-1');">
           Skip
         </button>
       </div>
@@ -56,10 +56,10 @@
     <!-- here comes the place for the "loader" -->
     <img src="./img/loader-1.png" class="loader" alt="loader" />
     <div class="back-next-button-div-1">
-      <button type="button" class="back-button" onclick="navigateTo('welcome-page');">
+      <button type="button" class="back-button btn" onclick="navigateTo('welcome-page');">
         Back
       </button>
-      <button type="button" class="next-button" onclick="navigateTo('onboarding-2');">
+      <button type="button" class="next-button btn" onclick="navigateTo('onboarding-2');">
         Next
       </button>
     </div>
@@ -76,10 +76,10 @@
     <!-- here comes the place for the "loader" -->
     <img src="./img/loader-2.png" class="loader" alt="loader" />
     <div class="back-next-button-div-2">
-      <button type="button" class="back-button" onclick="navigateTo('onboarding-1');">
+      <button type="button" class="back-button btn" onclick="navigateTo('onboarding-1');">
         Back
       </button>
-      <button type="button" class="next-button" onclick="navigateTo('onboarding-3');">
+      <button type="button" class="next-button btn" onclick="navigateTo('onboarding-3');">
         Next
       </button>
     </div>
@@ -97,10 +97,10 @@
     <!-- here comes the place for the "loader" -->
     <img src="./img/loader-3.png" class="loader" alt="loader" />
     <div class="back-next-button-div-3">
-      <button type="button" class="back-button" onclick="navigateTo('onboarding-2');">
+      <button type="button" class="back-button btn" onclick="navigateTo('onboarding-2');">
         Back
       </button>
-      <button type="button" class="next-button" onclick="navigateTo('onboarding-4');">
+      <button type="button" class="next-button btn" onclick="navigateTo('onboarding-4');">
         Next
       </button>
     </div>
@@ -116,7 +116,7 @@
     <!-- here comes the place for the "loader" -->
     <img src="./img/loader-4.png" class="loader" alt="loader" />
     <div class="back-next-button-div-4">
-      <button type="button" class="get-started-button" onclick="navigateTo('home'); showMenu();">
+      <button type="button" class="get-started-button btn" onclick="navigateTo('home'); showMenu();">
         Get started
       </button>
     </div>
@@ -135,25 +135,95 @@
 
   <!-- places to eat page -->
   <section id="placestoeat" class="page">
-    <div class="container-placestoeat">
-      <div class="flexbox-placestoeat-header">
-        <img class="back-icon" src="/img/icons/back-icon.svg" alt="back icon" />
-        <p class="header-placestoeat">
-          Places to eat in <span class="red">Aarhus</span>
-        </p>
-      </div>
-      <div class="explore-flexbox">
-        <input placeholder="Explore" class="explore-search" onkeyup="searchPlacesToEat(this.value)" />
-        <img class="filter-icon" src="/img/icons/filter-icon.svg" alt="filter icon" />
-      </div>
-      <select id="sortBy" onchange="orderBy(this.value)" class="order-select">
-        <option value="latest" selected>Latest</option>
-        <option value="oldest">Oldest</option>
-      </select>
+    <div class="filter-slider">
+      <div class="filter-content">
+        <img class="back-icon-filter" src="/img/icons/back-icon.svg" alt="back icon" onclick="getBackFilter()" />
+        <p class="filter-title">Filter by type</p>
+        <div class="filter-horizontal-scrolling">
+          <button class="button-filter" onclick="filterByType(this.value)" value="all" id="all">
+            <div class="filter-by-type active-type-all allBtn" id="all">
+              <p class="filter-label black">All</p>
+            </div>
+          </button>
+          <button class="button-filter" onclick="filterByType(this.value)" value="Restaurants" id="Restaurants">
+            <div class="filter-by-type" id="Restaurants">
+              <img class="subCategory-image"
+                src="https://files.guidedanmark.org/files/407/218969_VDKType-Restaurants.jpg">
+              <p class="filter-label">Restaurants</p>
+            </div>
+          </button>
+          <button class="button-filter" onclick="filterByType(this.value)" value="Nightlife and Clubs"
+            id="Nightlife and Clubs">
+            <div class="filter-by-type" id="Nightlife and Clubs">
+              <img class="subCategory-image"
+                src="https://files.guidedanmark.org/files/407/218969_VDKType-Restaurants.jpg">
+              <p class="filter-label">Nightlife and Clubs</p>
+            </div>
+          </button>
+          <button class="button-filter" onclick="filterByType(this.value)" value="Cafés" id="Cafés">
+            <div class="filter-by-type" id="Cafés">
+              <img class="subCategory-image"
+                src="https://files.guidedanmark.org/files/407/218969_VDKType-Restaurants.jpg">
+              <p class="filter-label">Cafés</p>
+            </div>
+          </button>
+          <button class="button-filter" onclick="filterByType(this.value)" value="Local Specialties"
+            id="Local Specialties">
+            <div class="filter-by-type" id="Local Specialties">
+              <img class="subCategory-image"
+                src="https://files.guidedanmark.org/files/407/218969_VDKType-Restaurants.jpg">
+              <p class="filter-label">Local Specialties</p>
+            </div>
+          </button>
+        </div>
+        <p class="filter-title-2">Filter by something</p>
+        <div class="filter-by-something">
+          <button class="filter-by-something-box active-filter" onclick="filterBySomething(this.value)" value="default"
+            id="default">default</button>
+          <button class="filter-by-something-box" onclick="filterBySomething(this.value)" value="family"
+            id="family">family</button>
+          <button class="filter-by-something-box" onclick="filterBySomething(this.value)" value="single"
+            id="single">single</button>
+          <button class="filter-by-something-box" onclick="filterBySomething(this.value)" value="couple"
+            id="couple">couple</button>
+          <button class="filter-by-something-box" onclick="filterBySomething(this.value)" value="bigger group"
+            id="bigger group">bigger group</button>
+          <button class="filter-by-something-box" onclick="filterBySomething(this.value)" value="friends"
+            id="friends">friends</button>
+        </div>
 
-      <section id="fetched-placesToEat"></section>
+        <div class="filter-cta-buttons">
+          <button class="reset-button" onclick="orderByLatest(); getBackFilter()">reset</button>
+          <button class="apply-button" onclick="getBackFilter()">apply</button>
+        </div>
+
+      </div>
     </div>
+    <div class="container-placestoeat">
+      <div class="sticky-header">
+        <div class="sticky-header-width">
+          <div class="flexbox-placestoeat-header">
+            <img class="back-icon" src="/img/icons/back-icon.svg" alt="back icon" />
+            <p class="header-placestoeat">
+              Places to eat in <span class="red">Aarhus</span>
+            </p>
+          </div>
+          <div class="explore-flexbox">
+            <input placeholder="Explore" class="explore-search" onkeyup="searchPlacesToEat(this.value)" />
+            <img class="filter-icon" src="/img/icons/filter-icon.svg" alt="filter icon" onclick="openFilter()" />
+          </div>
+        </div>
+      </div>
+      <div class="content-box">
+        <select id="sortBy" onchange="orderBy(this.value)" class="order-select">
+          <option value="latest" selected>Latest</option>
+          <option value="oldest">Oldest</option>
+        </select>
+
+        <section id="fetched-placesToEat"></section>
+      </div>
   </section>
+  </div>
 
   <!-- bookmarks page -->
   <section id="bookmarks" class="page">
