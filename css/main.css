@@ -147,23 +147,8 @@ h1 {
 }
 
 /* ---------- product styling ---------- */
-#products-container img {
-  width: 100%;
-  max-width: 250px;
-  height: auto;
-}
 
-#products-container article {
-  padding: 0.5em 0 2em;
-}
 
-.outOfStock p.status {
-  color: var(--text-color-out-of-stock);
-}
-
-.inStock p.status {
-  color: var(--text-color-in-stock);
-}
 
 /* ---------- form styling ---------- */
 form {
@@ -611,9 +596,92 @@ form {
 
 
 
+/* ---------- Main page Iurie ---------- */
+
+.arhus_txt{
+  color:#E70013 ;
+}
+.page{
+  
+  margin-left: 1.5rem;
+  text-align: start;
+}
+
+#products-container  {
+  text-align: center;
+  display: flex;
+  gap: 10px;
+  margin-top: 20px ;
+ font-size: 3vw;
+overflow-x: auto;
+  }
+
+   
+  .item1{
+  min-width: 100px;
+  background-color:#FFE882 ;
+  max-height: 100px;
+  padding-top: 20px;
+  
+   
+  }
+  .item2{
+    min-width: 100px;
+    background-color:#C3EBFF ;
+  height: 100px;
+  padding-top: 20px;
+    }
+    .item3{
+     min-width: 100px;
+      background-color:#A3EABF ;
+  height: 100px;
+  padding-top: 20px;
+      }
+      .item4{
+        min-width: 100px;
+        background-color:#FAC5CC ;
+  height: 100px;
+  padding-top: 20px;
+        }
+
+      .h1_style{
+        color: #022B52;
+      }
 
 
 
+.popular_container{
+  display: flex;
+ min-width: 200px;
+ min-height: 50px;
 
 
+}
+#popular_cards{
+  display: flex;
+  overflow-x: auto;
+
+
+}
+
+.img-pop{
+  max-width: 60%;
+  max-height: 60%;
+}
+.pop-title{
+  font-size: 2vw;
+}
+.pop-description{
+  font-size: 2vw;
+  align-self: flex-end;
+}
+.pop_txt_style{
+  margin-left: 10px;
+
+}
+
+.placeslike-container{
+  display: flex;
+  
+}
 /* ---------- Places to Eat page start Marius ---------- */

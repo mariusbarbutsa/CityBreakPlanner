@@ -56,6 +56,60 @@ function appendPlacesToEat(placesToEat) {
 }
 
 
+
+
+function appendPlacesToEat(popular) {
+  let htmlTemplate = "";
+  for (let pop of popular) {
+    // for (let placeToEatFile of placeToEat.Files) {
+    for (let i in pop.Files) {
+      let found = pop.Files[0]["Uri"];
+      htmlTemplate += /*html*/ `
+  
+      <div class="popular_container">
+   
+          <img src="${found}" class="img-pop">
+          <div class="pop_txt_style">
+          <p class="pop-title">${pop.Name}</p>
+          <p class="pop-description">${pop.Address.AddressLine1}</p>
+          
+        
+        
+          </div>
+      </div>
+      
+    `;
+      break;
+    }
+  }
+  console.log("jke;;")
+  document.querySelector('#popular_cards').innerHTML = htmlTemplate;
+}
+
+function appendPlacesToEat(placeLike) {
+  let htmlTemplate = "";
+  for (let placeToLike of placeLike) {
+    // for (let placeToEatFile of placeToEat.Files) {
+    for (let i in placeToLike.Files) {
+      let found = placeToLike.Files[0]["Uri"];
+      htmlTemplate += /*html*/ `
+      <div class="placesli-container">
+        <div onclick = "showDetailView(${placeToLike.id})" class="places-box" >
+          <img src="${found}" class="img-places">
+          <p class="place-title">${placeToLike.Name}</p>
+          <p class="place-description">${placeToLike.Address.AddressLine1}</p>
+          <p class="place-description">${placeToLike.Category.Name}</p>
+        </div>
+      </div>
+    `;
+      break;
+    }
+  }
+  document.querySelector('#placesYouLike').innerHTML = htmlTemplate;
+}
+
+
+
 function filterByPlacesToEat() {
   const results = _places.filter(
     (place) => place.MainCategory.Name == "Places to eat"
