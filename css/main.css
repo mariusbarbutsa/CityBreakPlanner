@@ -311,6 +311,7 @@ form {
   padding-bottom: 16px;
   padding-top: 24px;
   width: 100%;
+  z-index: 99;
 }
 
 .sticky-header-width {
@@ -410,6 +411,20 @@ form {
   width: 154px;
   height: 154px;
   background: #F9F9F9;
+}
+
+.places-container {
+  position: relative;
+  z-index: 1;
+}
+
+.fav-circle {
+  position: absolute;
+  top: 20px;
+  right: -5px;
+  transform: translate(-50%, -50%);
+
+
 }
 
 .place-description {
@@ -599,118 +614,257 @@ form {
 
 /* ---------- Main page Iurie ---------- */
 
-.arhus_txt{
-  color:#E70013 ;
-}
-.page{
-  
-  margin-left: 1.5rem;
-  text-align: start;
+.arhus_txt {
+  color: #E70013;
 }
 
-#products-container  {
+/* .page {
+  margin-left: 1.5rem;
+  text-align: start;
+} */
+
+#products-container {
   text-align: center;
   display: flex;
   gap: 10px;
-  margin-top: 20px ;
- font-size: 3vw;
-overflow-x: auto;
-  }
+  margin-top: 20px;
+  font-size: 3vw;
+  overflow-x: auto;
+}
 
-   
-  .item1{
+
+.item1 {
   min-width: 100px;
-  background-color:#FFE882 ;
+  background-color: #FFE882;
   max-height: 100px;
   padding-top: 20px;
-  
-   
-  }
-  .item2{
-    min-width: 100px;
-    background-color:#C3EBFF ;
+
+
+}
+
+.item2 {
+  min-width: 100px;
+  background-color: #C3EBFF;
   height: 100px;
   padding-top: 20px;
-    }
-    .item3{
-     min-width: 100px;
-      background-color:#A3EABF ;
+}
+
+.item3 {
+  min-width: 100px;
+  background-color: #A3EABF;
   height: 100px;
   padding-top: 20px;
-      }
-      .item4{
-        min-width: 100px;
-        background-color:#FAC5CC ;
+}
+
+.item4 {
+  min-width: 100px;
+  background-color: #FAC5CC;
   height: 100px;
   padding-top: 20px;
-        }
+}
 
-      .h1_style{
-        color: #022B52;
-      }
+.h1_style {
+  color: #022B52;
+}
 
 
 
-.popular_container{
+.popular_container {
   display: flex;
- min-width: 200px;
- min-height: 50px;
+  min-width: 200px;
+  min-height: 50px;
 
 
 
 }
-#popular_cards{
+
+#popular_cards {
   display: flex;
   overflow-x: auto;
 
 
 }
 
-.img-pop{
+.img-pop {
   max-width: 60%;
   max-height: 60%;
 }
-.pop-title{
+
+.pop-title {
   font-size: 2vw;
 }
-.pop-description{
+
+.pop-description {
   font-size: 2vw;
   align-self: flex-end;
 }
-.pop_txt_style{
+
+.pop_txt_style {
   margin-left: 10px;
 
 }
 
-.placeslike-container{
+.placeslike-container {
   display: flex;
-  
-}
-/* ---------- Places to Eat page start Marius ---------- */
 
-/* ---------- Places to Eat page start Marius ---------- */
+}
+
+/* ---------- Detailed View page start Marius ---------- */
+
+.back-icon-detailedview {
+  display: block;
+  text-align: left;
+  margin: 8px 0;
+  margin-left: 24px;
+}
+
+.detailedview-img-places {
+  width: 100%;
+  object-fit: cover;
+  height: 228px;
+}
+
+.detailedview-flexbox {
+  margin: 0 auto;
+  width: 327px;
+}
+
+.detailedview-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 0;
+  margin-top: 16px;
+}
+
+.detailedview-place-title {
+  font-family: VisitDenmark SemiBold;
+  font-size: 20px;
+  color: #022B52;
+}
+
+.detailedview-review {
+  display: flex;
+  flex-direction: start;
+  align-items: center;
+  line-height: 0;
+
+}
+
+.icon-heart {
+  margin-right: 4px;
+}
+
+.review-text {
+  margin-left: 8px;
+  font-family: VisitDenmark Regular;
+  font-size: 12px;
+}
+
+.detailedview-header2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 0;
+}
+
+.detailedview-category {
+  font-family: VisitDenmark Regular;
+  font-size: 12px;
+}
+
+.detaliedview-description {
+  font-family: VisitDenmark Medium;
+  font-size: 12px !important;
+  text-align: left !important;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  margin: 16px 0;
+}
+
+.detailedview-headerText {
+  font-family: VisitDenmark SemiBold;
+  font-size: 16px;
+  text-align: left;
+  margin-top: 8px;
+  margin-bottom: 3px;
+}
+
+.detailedview-address {
+  display: flex;
+  font-family: VisitDenmark Regular;
+  font-size: 12px;
+  text-align: left;
+  margin: 0;
+}
+
+.map-canvas {
+  width: 100%;
+  height: 100%;
+  margin-top: 12px;
+}
+
+.detailedview-headerText2 {
+  font-family: VisitDenmark SemiBold;
+  font-size: 16px;
+  text-align: left;
+  margin: 0;
+  margin-top: 24px;
+  margin-bottom: 12px;
+}
+
+.some-icons {
+  display: flex;
+  flex-direction: row;
+}
+
+.some-icon {
+  margin-right: 8px;
+}
+
+.wishlist-content {
+  display: grid;
+  grid-column-gap: 19px;
+  grid-row-gap: 19px;
+  grid-template-columns: auto auto;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 /* ---------- Bookmarks start David ---------- */
-#bookmarks .topbar{
+#bookmarks .topbar {
   background-color: #fff;
-margin-bottom: 50%;
+  margin-bottom: 50%;
 }
 
-.favorites-heading{
+.favorites-heading {
   color: #022b52;
   float: left;
   font-size: 32px;
 }
-.link-to-edit-page{
-float: right;
-padding-top: 11%;
-background-color: #fff;
-border: none;
+
+.link-to-edit-page {
+  float: right;
+  padding-top: 11%;
+  background-color: #fff;
+  border: none;
 }
 
 
 
-.favorites-edit-div{
+.favorites-edit-div {
   padding-top: 10%;
   padding-bottom: 30%;
   width: 85%;
@@ -721,67 +875,69 @@ border: none;
 
 /* hide and show try David */
 .container {
-    width: 85%;
-    margin: 0 auto;
+  width: 85%;
+  margin: 0 auto;
 }
+
 .question {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    padding: 24px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 24px 0;
 }
 
 .accordion {
-    display: flex;
-    border: none;
-    text-align: left;
-    transition: 0.4s;
-    font-size: 20px;
-    background-color: #fff;
+  display: flex;
+  border: none;
+  text-align: left;
+  transition: 0.4s;
+  font-size: 20px;
+  background-color: #fff;
 }
 
 .panel {
-    display: none;
-    overflow: hidden;
+  display: none;
+  overflow: hidden;
 }
 
 .panel {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s ease-out;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
 }
 
 .accordion:after {
-    content: url(../img/accordion-arrow.png);
-    float: right;
-    transition-duration: 0.9s;
-    padding-left: 15px;
+  content: url(../img/accordion-arrow.png);
+  float: right;
+  transition-duration: 0.9s;
+  padding-left: 15px;
 
 }
 
 .active:after {
-    transform: rotate(180deg) scaleX(-1);
-    transition-duration: 0.9s;
+  transform: rotate(180deg) scaleX(-1);
+  transition-duration: 0.9s;
 }
-.panel{
+
+.panel {
   padding-top: 10%;
   margin-right: 50%;
 }
 
-.upcoming-events-div{
+.upcoming-events-div {
   padding-top: 10%;
   padding-bottom: 30%;
   width: 85%;
   margin: 0 auto;
 }
 
-.upcoming-events-heading{
+.upcoming-events-heading {
   color: #022b52;
   float: left;
   font-size: 32px;
 }
 
-.date-div{
+.date-div {
   border-right: 1px solid black;
   background-color: #FAFAFA;
   color: #022B52;
@@ -789,7 +945,7 @@ border: none;
   margin-left: 7%;
 }
 
-.event-div{
+.event-div {
   color: #000C17;
   background-color: #FAFAFA;
   width: 80%;
@@ -798,16 +954,16 @@ border: none;
   margin-top: 3%;
 }
 
-.event-name{
+.event-name {
   font-size: 12px;
 }
 
-.event-location{
+.event-location {
   font-size: 8px;
 }
 
 
-.date-event-div{
+.date-event-div {
   flex-direction: row;
   display: flex;
 }
