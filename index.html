@@ -19,7 +19,7 @@
     <a href="#profile">Profile</a>
   </nav>
 
-  <!-- Onboarding pages -->
+  <!-- Onboarding pages David -->
   <!-- Welcome page start -->
   <section id="welcome-page" class="page">
     <img src="/img/Icon awesome-tripadvisor.png" class="logo-welcome-screen" />
@@ -57,10 +57,10 @@
     <img src="./img/loader-1.png" class="loader" alt="loader" />
     <div class="back-next-button-div-1">
       <button type="button" class="back-button btn" onclick="navigateTo('welcome-page');">
-        Back
+      <img src="./img/left-arrow-onboarding-blue.png" alt="left-arrow-onboarding-blue" class="left-arrow-onboarding-blue">  Back 
       </button>
       <button type="button" class="next-button btn" onclick="navigateTo('onboarding-2');">
-        Next
+       Next <img src="./img/right-arrow-onboarding-white.png" alt="right-arrow-onboarding-blue" class="right-arrow-onboarding-blue">
       </button>
     </div>
   </section>
@@ -70,17 +70,17 @@
   <section id="onboarding-2" class="page">
     <img src="./img/onboarding2-image.png" class="onboarding2-image" alt="" />
     <p class="onboarding2-text">
-      You can start search for activities, <br />places to eat, attractions or
+      Start to search for activities, <br />places to eat, attractions or
       events!
     </p>
     <!-- here comes the place for the "loader" -->
     <img src="./img/loader-2.png" class="loader" alt="loader" />
     <div class="back-next-button-div-2">
       <button type="button" class="back-button btn" onclick="navigateTo('onboarding-1');">
-        Back
+       <img src="./img/left-arrow-onboarding-blue.png" alt="left-arrow-onboarding-blue" class="left-arrow-onboarding-blue"> Back
       </button>
       <button type="button" class="next-button btn" onclick="navigateTo('onboarding-3');">
-        Next
+        Next  <img src="./img/right-arrow-onboarding-white.png" alt="right-arrow-onboarding-blue" class="right-arrow-onboarding-blue">
       </button>
     </div>
   </section>
@@ -90,7 +90,7 @@
   <section id="onboarding-3" class="page">
     <img src="./img/onboarding3-image.png" class="onboarding3-image" alt="" />
     <p class="onboarding3-text">
-      You can search and filter<br />
+      Search and filter<br />
       The search results, to find<br />
       The perfect match.
     </p>
@@ -98,10 +98,10 @@
     <img src="./img/loader-3.png" class="loader" alt="loader" />
     <div class="back-next-button-div-3">
       <button type="button" class="back-button btn" onclick="navigateTo('onboarding-2');">
-        Back
+       <img src="./img/left-arrow-onboarding-blue.png" alt="left-arrow-onboarding-blue" class="left-arrow-onboarding-blue"> Back
       </button>
       <button type="button" class="next-button btn" onclick="navigateTo('onboarding-4');">
-        Next
+        Next <img src="./img/right-arrow-onboarding-white.png" alt="right-arrow-onboarding-blue" class="right-arrow-onboarding-blue">
       </button>
     </div>
   </section>
@@ -111,7 +111,7 @@
   <section id="onboarding-4" class="page">
     <img src="./img/onboarding4-image.png" class="onboarding3-image" alt="" />
     <p class="onboarding4-text">
-      You can add the favourite ones to your calendar.
+      Add the favourite ones<br> to your calendar.
     </p>
     <!-- here comes the place for the "loader" -->
     <img src="./img/loader-4.png" class="loader" alt="loader" />
@@ -251,22 +251,81 @@
   </section>
   </div>
 
-  <!-- bookmarks page -->
-  <section id="bookmarks" class="page">
-    <header class="topbar">
-      <h2>Add New Product</h2>
-    </header>
-    <form>
-      <input id="brand" type="text" name="brand" placeholder="Brand" />
-      <input id="model" type="text" name="model" placeholder="Model" />
-      <input id="price" type="text" name="price" placeholder="Price" />
-      <input id="img" type="text" name="img" placeholder="Image URL" />
-      <button type="button" name="button" onclick="addNewProduct()">
-        Save
-      </button>
-    </form>
-  </section>
+   <!-- bookmarks page David -->
+    <section id="bookmarks" class="page">
+    
+        <div class="favorites-edit-div">
+        <h2 class="favorites-heading">Favourites</h2>
+        <button class="link-to-edit-page" onclick="navigateTo('edit-page')">
+        <img src="./img/edit-image.png" alt="edit-image" class="edit-image">
+        </button>
+        </div>
+    
+     <div class="container">
+       <div class="question">
+<button class="accordion">Wishlist</button>
+<div class="panel">
+  <img src="./img/example-image-bookmarks.png" class="example-image-bookmarks.png" onclick="navigateTo('edit-page');">
+</div>
+       </div>
+     </div>
 
+<div class="container">
+       <div class="question">
+<button class="accordion">Custom list</button>
+<div class="panel">
+  <img src="./img/example-image-bookmarks.png" class="example-image-bookmarks.png">
+</div>
+       </div>
+     </div>
+
+     <div class="container">
+       <div class="question">
+<button class="accordion">Places to visit</button>
+<div class="panel">
+  <img src="./img/example-image-bookmarks.png" class="example-image-bookmarks.png">
+</div>
+       </div>
+     </div>
+
+     <div class="upcoming-events-div">
+     <h2 class="upcoming-events-heading">Upcoming events</h2>
+    </div>
+
+    <div class="date-event-div">
+
+    <div class="date-div">
+    <p>May</p>
+    <p>14</p>
+    </div>
+
+    <div class="event-div">
+    <p class="event-name">Tour de Femme</p>
+    <p class="event-location">I og omkring Aarhus, Aarhus C</p>
+   </div>
+
+   </div>
+
+   <div class="date-event-div">
+
+    <div class="date-div">
+    <p>May</p>
+    <p>14</p>
+    </div>
+
+    <div class="event-div">
+    <p class="event-name">Tour de Femme</p>
+    <p class="event-location">I og omkring Aarhus, Aarhus C</p>
+   </div>
+
+   </div>
+   
+
+    </section>
+<!-- Edit the lists page David -->
+<section id="edit-page" class="page">
+
+</section>
   <!-- Profile page -->
   <section id="profile" class="page"></section>
 

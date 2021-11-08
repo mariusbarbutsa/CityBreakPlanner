@@ -227,7 +227,9 @@ form {
   width: 30%;
   float: left;
   margin-left: 5%;
-  background-color: #022b52;
+  background-color: #fff;
+  border: 1px solid #022B52;
+  color: #022b52;
 }
 
 .next-button {
@@ -688,3 +690,126 @@ overflow-x: auto;
 
 /* ---------- Places to Eat page start Marius ---------- */
 
+/* ---------- Bookmarks start David ---------- */
+#bookmarks .topbar{
+  background-color: #fff;
+margin-bottom: 50%;
+}
+
+.favorites-heading{
+  color: #022b52;
+  float: left;
+  font-size: 32px;
+}
+.link-to-edit-page{
+float: right;
+padding-top: 11%;
+background-color: #fff;
+border: none;
+}
+
+
+
+.favorites-edit-div{
+  padding-top: 10%;
+  padding-bottom: 30%;
+  width: 85%;
+  margin: 0 auto;
+}
+
+
+
+/* hide and show try David */
+.container {
+    width: 85%;
+    margin: 0 auto;
+}
+.question {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 24px 0;
+}
+
+.accordion {
+    display: flex;
+    border: none;
+    text-align: left;
+    transition: 0.4s;
+    font-size: 20px;
+    background-color: #fff;
+}
+
+.panel {
+    display: none;
+    overflow: hidden;
+}
+
+.panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+}
+
+.accordion:after {
+    content: url(../img/accordion-arrow.png);
+    float: right;
+    transition-duration: 0.9s;
+    padding-left: 15px;
+
+}
+
+.active:after {
+    transform: rotate(180deg) scaleX(-1);
+    transition-duration: 0.9s;
+}
+.panel{
+  padding-top: 10%;
+  margin-right: 50%;
+}
+
+.upcoming-events-div{
+  padding-top: 10%;
+  padding-bottom: 30%;
+  width: 85%;
+  margin: 0 auto;
+}
+
+.upcoming-events-heading{
+  color: #022b52;
+  float: left;
+  font-size: 32px;
+}
+
+.date-div{
+  border-right: 1px solid black;
+  background-color: #FAFAFA;
+  color: #022B52;
+  width: 20%;
+  margin-left: 7%;
+}
+
+.event-div{
+  color: #000C17;
+  background-color: #FAFAFA;
+  width: 80%;
+  text-align: left;
+  padding-left: 5%;
+  margin-top: 3%;
+}
+
+.event-name{
+  font-size: 12px;
+}
+
+.event-location{
+  font-size: 8px;
+}
+
+
+.date-event-div{
+  flex-direction: row;
+  display: flex;
+}
+
+/* ---------- Bookmarks end david ---------- */
