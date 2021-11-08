@@ -398,7 +398,6 @@ form {
   grid-template-columns: auto auto;
 }
 
-.places-container {}
 
 .img-places {
   width: 154px;
@@ -506,7 +505,7 @@ form {
   cursor: pointer;
   outline: inherit;
   text-decoration: none;
-  webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: transparent;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
@@ -656,6 +655,7 @@ overflow-x: auto;
  min-height: 50px;
 
 
+
 }
 #popular_cards{
   display: flex;
@@ -685,3 +685,6 @@ overflow-x: auto;
   
 }
 /* ---------- Places to Eat page start Marius ---------- */
+
+/* ---------- Places to Eat page start Marius ---------- */
+
