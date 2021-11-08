@@ -19,6 +19,8 @@ async function fetchData() {
   orderByLatest();
   // appendPlacesToEat(_places);
   // showLoader(false);
+  appendPopular(_places);
+  appendPlacesLike(_places);
 }
 
 fetchData();
@@ -58,7 +60,7 @@ function appendPlacesToEat(placesToEat) {
 
 
 
-function appendPlacesToEat(popular) {
+function appendPopular(popular) {
   let htmlTemplate = "";
   for (let pop of popular) {
     // for (let placeToEatFile of placeToEat.Files) {
@@ -86,7 +88,9 @@ function appendPlacesToEat(popular) {
   document.querySelector('#popular_cards').innerHTML = htmlTemplate;
 }
 
-function appendPlacesToEat(placeLike) {
+
+
+function appendPlacesLike(placeLike) {
   let htmlTemplate = "";
   for (let placeToLike of placeLike) {
     // for (let placeToEatFile of placeToEat.Files) {
