@@ -16,7 +16,7 @@ async function fetchData() {
   const response = await fetch('json/data.json');
   const data = await response.json();
   _places = data;
-  _places.length = 200;
+  // _places.length = 200;
   orderByLatest();
   // appendPlacesToEat(_places);
   // showLoader(false);
@@ -55,6 +55,29 @@ function appendPlacesToEat(placesToEat) {
     }
   }
   document.querySelector('#fetched-placesToEat').innerHTML = htmlTemplate;
+}
+
+function appendActivities(placesToEat) {
+  let htmlTemplate = "";
+  for (let placeToEat of placesToEat) {
+    // for (let placeToEatFile of placeToEat.Files) {
+    for (let i in placeToEat.Files) {
+      let found = placeToEat.Files[0]["Uri"];
+      htmlTemplate += /*html*/ `
+      <div class="places-container">
+        <div div onclick = "showDetailView(${placeToEat.Id}); navigateTo('detailedview');" class="places-box" >
+          <img src="${found}" class="img-places">
+          <p class="place-title">${placeToEat.Name}</p>
+          <p class="place-description">${placeToEat.Address.AddressLine1}</p>
+          <p class="place-description">${placeToEat.Category.Name}</p>
+        </div> 
+        ${generateFavPlacesButton2(placeToEat.Id)}  
+      </div>
+    `;
+      break;
+    }
+  }
+  document.querySelector('#fetched-activities').innerHTML = htmlTemplate;
 }
 
 function appendFavPlaces() {
@@ -103,7 +126,15 @@ function orderByLatest() {
   results.sort((product1, product2) => {
     return product1.Modified.localeCompare(product2.Modified);
   });
+
+  const resultsActivites = _places.filter(
+    (place) => place.MainCategory.Name == "Activities"
+  );
+  resultsActivites.sort((product1, product2) => {
+    return product1.Modified.localeCompare(product2.Modified);
+  });
   appendPlacesToEat(results);
+  appendActivities(resultsActivites);
 }
 
 function orderByOldest() {
@@ -113,7 +144,15 @@ function orderByOldest() {
   results.sort((product1, product2) => {
     return product2.Modified.localeCompare(product1.Modified);
   });
+
+  const resultsActivites = _places.filter(
+    (place) => place.MainCategory.Name == "Activities"
+  );
+  resultsActivites.sort((product1, product2) => {
+    return product2.Modified.localeCompare(product1.Modified);
+  });
   appendPlacesToEat(results);
+  appendActivities(resultsActivites);
 }
 
 
@@ -137,9 +176,25 @@ function searchPlacesToEat(value) {
   appendPlacesToEat(filteredProducts);
 }
 
-function openFilter() {
-
+function searchActivities(value) {
+  const resultsActivites = _places.filter(
+    (place) => place.MainCategory.Name == "Activities"
+  );
+  resultsActivites.sort((product1, product2) => {
+    return product1.Modified.localeCompare(product2.Modified);
+  });
+  let searchQuery = value.toLowerCase();
+  console.log(searchQuery);
+  let filteredProducts = [];
+  for (let place of resultsActivites) {
+    let name = place.Name.toLowerCase();
+    if (name.includes(searchQuery)) {
+      filteredProducts.push(place);
+    }
+  }
+  appendActivities(filteredProducts);
 }
+
 
 
 function filterByType(value) {
@@ -174,9 +229,19 @@ function filterByType(value) {
     results2.sort((product1, product2) => {
       return product1.Modified.localeCompare(product2.Modified);
     });
+    const resultsActivities = _places.filter(
+      (place) => place.MainCategory.Name == "Activities"
+    );
+    const resultsActivities2 = resultsActivities.filter(
+      (place) => place.Category.Name == value
+    );
+    resultsActivities2.sort((product1, product2) => {
+      return product1.Modified.localeCompare(product2.Modified);
+    });
     appendPlacesToEat(results2);
+    appendActivities(resultsActivities2);
     console.log(results);
-    console.log(results2);
+    // console.log(results2);
   }
 }
 
@@ -196,13 +261,18 @@ function filterBySomething(value) {
 }
 
 function getBackFilter() {
-  let back = document.querySelector(".filter-slider");
-  back.style.left = "100%";
+  let backs = document.querySelectorAll(".filter-slider");
+  for (const back of backs) {
+    back.style.left = "100%";
+  }
+
 }
 
 function openFilter() {
-  let back = document.querySelector(".filter-slider");
-  back.style.left = "0";
+  let backs = document.querySelectorAll(".filter-slider");
+  for (const back of backs) {
+    back.style.left = "0";
+  }
 }
 
 

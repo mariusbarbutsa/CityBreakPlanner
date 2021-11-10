@@ -145,24 +145,24 @@
         </svg><br>
         <p class="txt_card"> Places to eat</p>
       </div>
-      <div class="item2"><svg xmlns="http://www.w3.org/2000/svg" width="32.003" height="36.444"
-          viewBox="0 0 32.003 36.444">
+      <div class="item2" onclick="navigateTo('activities')"><svg xmlns="http://www.w3.org/2000/svg" width="32.003"
+          height="36.444" viewBox="0 0 32.003 36.444">
           <path id="Icon_material-event-note" data-name="Icon material-event-note"
             d="M29.391,17.9H11.612v3.644h17.78ZM32.947,5.144H31.169V1.5H27.613V5.144H13.39V1.5H9.834V5.144H8.056A3.585,3.585,0,0,0,4.518,8.789L4.5,34.3a3.6,3.6,0,0,0,3.556,3.644H32.947A3.612,3.612,0,0,0,36.5,34.3V8.789A3.612,3.612,0,0,0,32.947,5.144Zm0,29.155H8.056V14.255H32.947Zm-8.89-9.111H11.612v3.644H24.057Z"
             transform="translate(-4.5 -1.5)" fill="#00587A" />
         </svg><br>
         <p class="txt_card">Activities</p>
       </div>
-      <div class="item3"><svg xmlns="http://www.w3.org/2000/svg" width="32.003" height="36.444"
-          viewBox="0 0 32.003 36.444">
+      <div class="item3" onclick="navigateTo('attractions')"><svg xmlns="http://www.w3.org/2000/svg" width="32.003"
+          height="36.444" viewBox="0 0 32.003 36.444">
           <path id="Icon_material-event-note" data-name="Icon material-event-note"
             d="M29.391,17.9H11.612v3.644h17.78ZM32.947,5.144H31.169V1.5H27.613V5.144H13.39V1.5H9.834V5.144H8.056A3.585,3.585,0,0,0,4.518,8.789L4.5,34.3a3.6,3.6,0,0,0,3.556,3.644H32.947A3.612,3.612,0,0,0,36.5,34.3V8.789A3.612,3.612,0,0,0,32.947,5.144Zm0,29.155H8.056V14.255H32.947Zm-8.89-9.111H11.612v3.644H24.057Z"
             transform="translate(-4.5 -1.5)" fill="#007554" />
         </svg><br>
         <p class="txt_card">Attractions</p>
       </div>
-      <div class="item4"><svg xmlns="http://www.w3.org/2000/svg" width="32.003" height="36.444"
-          viewBox="0 0 32.003 36.444">
+      <div class="item4" onclick="navigateTo('events')"><svg xmlns="http://www.w3.org/2000/svg" width="32.003"
+          height="36.444" viewBox="0 0 32.003 36.444">
           <path id="Icon_material-event-note" data-name="Icon material-event-note"
             d="M29.391,17.9H11.612v3.644h17.78ZM32.947,5.144H31.169V1.5H27.613V5.144H13.39V1.5H9.834V5.144H8.056A3.585,3.585,0,0,0,4.518,8.789L4.5,34.3a3.6,3.6,0,0,0,3.556,3.644H32.947A3.612,3.612,0,0,0,36.5,34.3V8.789A3.612,3.612,0,0,0,32.947,5.144Zm0,29.155H8.056V14.255H32.947Zm-8.89-9.111H11.612v3.644H24.057Z"
             transform="translate(-4.5 -1.5)" fill="#9A0035" />
@@ -269,6 +269,208 @@
         </select>
 
         <div id="fetched-placesToEat"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- activities page - Marius -->
+  <section id="activities" class="page">
+    <div class="filter-slider">
+      <div class="filter-content">
+        <img class="back-icon-filter" src="/img/icons/back-icon.svg" alt="back icon" onclick="getBackFilter();" />
+        <p class="filter-title">Filter by type</p>
+        <div class="filter-horizontal-scrolling">
+          <button class="button-filter" onclick="filterByType(this.value)" value="all" id="all">
+            <div class="filter-by-type active-type-all allBtn" id="all">
+              <p class="filter-label black">All</p>
+            </div>
+          </button>
+          <button class="button-filter" onclick="filterByType(this.value)" value="Sport and Activities"
+            id="Sport and Activities">
+            <div class="filter-by-type" id="Sport and Activities">
+              <img class="subCategory-image"
+                src="https://files.guidedanmark.org/files/466/219162_VDKType-Sport-og-andre-aktiviteter.jpg">
+              <p class="filter-label">Sport and Activities</p>
+            </div>
+          </button>
+          <button class="button-filter" onclick="filterByType(this.value)" value="Boat Rental" id="Boat Rental">
+            <div class="filter-by-type" id="Boat Rental">
+              <img class="subCategory-image"
+                src="hhttps://files.guidedanmark.org/files/466/219167_VDKType-baadudlejere.jpg">
+              <p class="filter-label">Boat Rental</p>
+            </div>
+          </button>
+          <button class="button-filter" onclick="filterByType(this.value)" value="Boat Rental" id="Boat Rental">
+            <div class="filter-by-type" id="Boat Rental">
+              <img class="subCategory-image"
+                src="hhttps://files.guidedanmark.org/files/466/219167_VDKType-baadudlejere.jpg">
+              <p class="filter-label">Boat Rental</p>
+            </div>
+          </button>
+          <button class="button-filter" onclick="filterByType(this.value)" value="Theatres/Cinemas"
+            id="Theatres/Cinemas">
+            <div class="filter-by-type" id="Theatres/Cinemas">
+              <img class="subCategory-image"
+                src="https://files.guidedanmark.org/files/466/219170_VDKType-biografer.jpg">
+              <p class="filter-label">Theatres/Cinemas</p>
+            </div>
+          </button>
+          <button class="button-filter" onclick="filterByType(this.value)" value="Bike Rentals" id="Bike Rentals">
+            <div class="filter-by-type" id="Bike Rentals">
+              <img class="subCategory-image"
+                src="https://files.guidedanmark.org/files/466/219171_VDKType-cykeludlejning.jpg">
+              <p class="filter-label">Bike Rentals</p>
+            </div>
+          </button>
+          <button class="button-filter" onclick="filterByType(this.value)" value="Golf Courses" id="Golf Courses">
+            <div class="filter-by-type" id="Golf Courses">
+              <img class="subCategory-image" src="https://files.guidedanmark.org/files/466/219151_VDKType-golfklub.jpg">
+              <p class="filter-label">Golf Courses</p>
+            </div>
+          </button>
+          <button class="button-filter" onclick="filterByType(this.value)" value="Horse Activities"
+            id="Horse Activities">
+            <div class="filter-by-type" id="Horse Activities">
+              <img class="subCategory-image"
+                src="https://files.guidedanmark.org/files/466/219152_VDKType-hesteudlejning.jpg">
+              <p class="filter-label">Horse Activities</p>
+            </div>
+          </button>
+          <button class="button-filter" onclick="filterByType(this.value)" value="Yachting harbours"
+            id="Yachting harbours">
+            <div class="filter-by-type" id="Yachting harbours">
+              <img class="subCategory-image"
+                src="https://files.guidedanmark.org/files/466/219156_VDKType-lystbaadhavne.jpg">
+              <p class="filter-label">Yachting harbours</p>
+            </div>
+          </button>
+          <button class="button-filter" onclick="filterByType(this.value)" value="Shopping" id="Shopping">
+            <div class="filter-by-type" id="Shopping">
+              <img class="subCategory-image" src="https://files.guidedanmark.org/files/466/219160_VDKType-shopping.jpg">
+              <p class="filter-label">Shopping</p>
+            </div>
+          </button>
+          <button class="button-filter" onclick="filterByType(this.value)" value="Sightseeing" id="Sightseeing">
+            <div class="filter-by-type" id="Sightseeing">
+              <img class="subCategory-image" src="https://files.guidedanmark.org/files/466/214602_vdktype-4.jpg">
+              <p class="filter-label">Sightseeing</p>
+            </div>
+          </button>
+          <button class="button-filter" onclick="filterByType(this.value)" value="Bike Rentals" id="Bike Rentals">
+            <div class="filter-by-type" id="Bike Rentals">
+              <img class="subCategory-image"
+                src="https://files.guidedanmark.org/files/466/219171_VDKType-cykeludlejning.jpg">
+              <p class="filter-label">Bike Rentals</p>
+            </div>
+          </button>
+          <button class="button-filter" onclick="filterByType(this.value)" value="Bike Rentals" id="Bike Rentals">
+            <div class="filter-by-type" id="Beaches and lidos">
+              <img class="subCategory-image" src="Beaches and lidos">
+              <p class="filter-label">Beaches and lidos</p>
+            </div>
+          </button>
+          <button class="button-filter" onclick="filterByType(this.value)" value="Swimming pools and water parks"
+            id="Swimming pools and water parks">
+            <div class="filter-by-type" id="Swimming pools and water parks">
+              <img class="subCategory-image"
+                src="https://files.guidedanmark.org/files/466/219164_VDKType-svoemmehaller.jpg">
+              <p class="filter-label">Swimming pools and water parks</p>
+            </div>
+          </button>
+          <button class="button-filter" onclick="filterByType(this.value)" value="DIY Tours" id="DIY Tours">
+            <div class="filter-by-type" id="DIY Tours">
+              <img class="subCategory-image"
+                src="https://files.guidedanmark.org/files/466/219166_VDKType-turforslag.jpg">
+              <p class="filter-label">DIY Tours</p>
+            </div>
+          </button>
+          <button class="button-filter" onclick="filterByType(this.value)" value="Wellness" id="Wellness">
+            <div class="filter-by-type" id="Wellness">
+              <img class="subCategory-image" src="https://files.guidedanmark.org/files/466/214607_vdktype-13.jpg">
+              <p class="filter-label">Wellness</p>
+            </div>
+          </button>
+          <button class="button-filter" onclick="filterByType(this.value)" value="Swimming lakes" id="Swimming lakes">
+            <div class="filter-by-type" id="Swimming lakes">
+              <img class="subCategory-image" src="https://files.guidedanmark.org/files/466/219172_VDKType-Bade.jpg">
+              <p class="filter-label">Swimming lakes</p>
+            </div>
+          </button>
+          <button class="button-filter" onclick="filterByType(this.value)" value="Indoor fun for young and old"
+            id="Indoor fun for young and old">
+            <div class="filter-by-type" id="Indoor fun for young and old">
+              <img class="subCategory-image"
+                src="https://files.guidedanmark.org/files/466/219153_VDKType-indendoers-legeland.jpg">
+              <p class="filter-label">Indoor fun for young and old</p>
+            </div>
+          </button>
+          <button class="button-filter" onclick="filterByType(this.value)" value="Playgrounds" id="Playgrounds">
+            <div class="filter-by-type" id="Playgrounds">
+              <img class="subCategory-image"
+                src="https://files.guidedanmark.org/files/466/219155_VDKType-legepladser.jpg">
+              <p class="filter-label">Playgrounds</p>
+            </div>
+          </button>
+          <button class="button-filter" onclick="filterByType(this.value)" value="Outdoor Gym" id="Outdoor Gym">
+            <div class="filter-by-type" id="Outdoor Gym">
+              <img class="subCategory-image"
+                src="https://files.guidedanmark.org/files/466/219157_VDKType-naturfitness.jpg">
+              <p class="filter-label">Outdoor Gym</p>
+            </div>
+          </button>
+          <button class="button-filter" onclick="filterByType(this.value)" value="Other activities"
+            id="Other activities">
+            <div class="filter-by-type" id="Other activities">
+              <img class="subCategory-image" src="https://files.guidedanmark.org/files/466/214617_vdktype-20.jpg">
+              <p class="filter-label">Other activities</p>
+            </div>
+          </button>
+        </div>
+        <p class="filter-title-2">Filter by something</p>
+        <div class="filter-by-something">
+          <button class="filter-by-something-box active-filter" onclick="filterBySomething(this.value)" value="default"
+            id="default">default</button>
+          <button class="filter-by-something-box" onclick="filterBySomething(this.value)" value="family"
+            id="family">family</button>
+          <button class="filter-by-something-box" onclick="filterBySomething(this.value)" value="single"
+            id="single">single</button>
+          <button class="filter-by-something-box" onclick="filterBySomething(this.value)" value="couple"
+            id="couple">couple</button>
+          <button class="filter-by-something-box" onclick="filterBySomething(this.value)" value="bigger group"
+            id="bigger group">bigger group</button>
+          <button class="filter-by-something-box" onclick="filterBySomething(this.value)" value="friends"
+            id="friends">friends</button>
+        </div>
+
+        <div class="filter-cta-buttons">
+          <button class="reset-button" onclick="orderByLatest(); getBackFilter()">reset</button>
+          <button class="apply-button" onclick="getBackFilter()">apply</button>
+        </div>
+
+      </div>
+    </div>
+    <div class="container-placestoeat">
+      <div class="sticky-header">
+        <div class="sticky-header-width">
+          <div class="flexbox-placestoeat-header">
+            <img class="back-icon" src="/img/icons/back-icon.svg" alt="back icon" onclick="goBack();" />
+            <p class="header-placestoeat">
+              Activities in <span class="red">Aarhus</span>
+            </p>
+          </div>
+          <div class="explore-flexbox">
+            <input placeholder="Explore" class="explore-search" onkeyup="searchActivities(this.value)" />
+            <img class="filter-icon" src="/img/icons/filter-icon.svg" alt="filter icon" onclick="openFilter()" />
+          </div>
+        </div>
+      </div>
+      <div class="content-box">
+        <select id="sortBy" onchange="orderBy(this.value)" class="order-select">
+          <option value="latest" selected>Latest</option>
+          <option value="oldest">Oldest</option>
+        </select>
+
+        <div id="fetched-activities"></div>
       </div>
     </div>
   </section>

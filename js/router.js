@@ -78,10 +78,3 @@
 //     }
 //   }
 // }
-
-function showMenu() {
-  let navBar = document.querySelector(".tabbar");
-  if ((navBar.style.display = "none")) {
-    navBar.style.display = "block";
-  }
-}

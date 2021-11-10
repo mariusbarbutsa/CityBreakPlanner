@@ -394,12 +394,15 @@ form {
   padding: 16px 0;
 }
 
-#fetched-placesToEat {
-  display: grid;
-  grid-column-gap: 19px;
-  grid-row-gap: 19px;
-  grid-template-columns: auto auto;
+#fetched-placesToEat,
+#fetched-activities {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 109x;
+  column-gap: 19px;
+
 }
+
 
 
 .img-places {

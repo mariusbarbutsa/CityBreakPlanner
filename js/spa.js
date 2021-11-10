@@ -43,3 +43,10 @@ function pageChange() {
 }
 
 pageChange(); // called by default when the app is loaded for the first time
+
+function showMenu() {
+  let navBar = document.querySelector(".tabbar");
+  if ((navBar.style.display = "none")) {
+    navBar.style.display = "block";
+  }
+}
