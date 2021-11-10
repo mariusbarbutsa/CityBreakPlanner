@@ -621,99 +621,153 @@ form {
 
 /* ---------- Main page Iurie ---------- */
 
-.arhus_txt {
-  color: #E70013;
+.arhus_txt{
+  color:#E70013 ;
 }
-
-/* .page {
+.pages{
+  
   margin-left: 1.5rem;
   text-align: start;
-} */
+}
 
-#products-container {
+#products-container  {
   text-align: center;
   display: flex;
   gap: 10px;
-  margin-top: 20px;
-  font-size: 3vw;
-  overflow-x: auto;
-}
+  margin-top: 20px ;
+ font-size: 3vw;
+overflow-x: auto;
+-ms-overflow-style: none;  /* IE and Edge */
+scrollbar-width: none; 
+  }
 
-
-.item1 {
+  #products-container::-webkit-scrollbar {
+    display: none;
+  }
+  .item1{
   min-width: 100px;
-  background-color: #FFE882;
-  max-height: 100px;
-  padding-top: 20px;
+  background-color:#FFE882 ;
+  min-height: 100px;
 
-
-}
-
-.item2 {
-  min-width: 100px;
-  background-color: #C3EBFF;
-  height: 100px;
-  padding-top: 20px;
-}
-
-.item3 {
-  min-width: 100px;
-  background-color: #A3EABF;
-  height: 100px;
-  padding-top: 20px;
-}
-
-.item4 {
-  min-width: 100px;
-  background-color: #FAC5CC;
-  height: 100px;
-  padding-top: 20px;
-}
-
-.h1_style {
-  color: #022B52;
-}
-
-
-
-.popular_container {
   display: flex;
-  min-width: 200px;
-  min-height: 50px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+   
+  }
+  .item2{
+    min-width: 100px;
+    background-color:#C3EBFF ;
+  min-height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+    }
+    .item3{
+     min-width: 100px;
+      background-color:#A3EABF ;
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+      }
+      .item4{
+        min-width: 100px;
+        background-color:#FAC5CC ;
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+        }
+
+      .h1_style{
+        color: #022B52;
+      }
+
+
+
+.popular_container{
+  display: flex;
+  min-width: 250px ;
+ height: 50px;
+ background-color:#F9F9F9 ;
 
 
 
 }
-
-#popular_cards {
+#popular_cards{
   display: flex;
   overflow-x: auto;
-
+  gap: 10px;
+  -ms-overflow-style: none;  
+  scrollbar-width: none; 
 
 }
 
-.img-pop {
-  max-width: 60%;
-  max-height: 60%;
+.img-pop{
+  max-width: 100%;
+  max-height: 100%;
 }
-
-.pop-title {
+.pop-title{
   font-size: 2vw;
 }
-
-.pop-description {
+.pop-description{
   font-size: 2vw;
   align-self: flex-end;
 }
-
-.pop_txt_style {
+.pop_txt_style{
   margin-left: 10px;
 
 }
 
-.placeslike-container {
+.placeslike-container{
   display: flex;
+  
+}
 
+#placesYouLike{
+  display: flex;
+  overflow-x: auto;
+  gap: 100px;
+  -ms-overflow-style: none; 
+  scrollbar-width: none;
+  
+}
+.like_container{
+  display: flex;
+  width: 190px ;
+ flex-direction: column;
+}
+
+#placesYouLike::-webkit-scrollbar {
+  display: none;
+
+}
+#popular_cards::-webkit-scrollbar {
+  display: none;
+
+}
+.img-like{
+  width: 50vw;
+  height: 50vw;
+  
+}
+
+
+.like-title{
+  font-size: 16px;
+}
+.like-description{
+  font-size: 12px;
+  
+  margin-top: -5px;
 }
 
 /* ---------- Detailed View page start Marius ---------- */
