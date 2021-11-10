@@ -64,17 +64,6 @@ h1 {
 }
 
 /* ---------- topbar styling ---------- */
-.topbar {
-  background-color: var(--green);
-  color: var(--text-color-light);
-  padding: 13.5px;
-  text-transform: uppercase;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 9999;
-}
 
 .topbar h2 {
   margin: 0;
@@ -83,37 +72,51 @@ h1 {
 
 /* ---------- tabbar styling ---------- */
 .tabbar {
-  background-color: var(--green);
+  background-color: #FFFFFF;
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 99999999;
+  z-index: 9999;
+  box-shadow: 0px 40px 99px #afadad;
   display: none;
+  flex-direction: row;
+  justify-content: center;
 }
 
-/* Style the links inside the navigation bar */
-.tabbar a {
-  display: inline-block;
-  color: var(--text-color-light);
+.tabbar {
   text-align: center;
-  padding: 20px 16px;
+  padding: 20px 16px 14px 16px;
   text-decoration: none;
-  font-size: 0.8em;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-}
-
-/* Change the color of links on hover */
-.tabbar a:hover {
-  background-color: var(--light-grey);
-  color: var(--text-color-dark);
 }
 
 /* Add a color to the active/current link */
-.tabbar a.active {
-  background-color: var(--light-green);
-  color: var(--text-color-light);
+
+.active path {
+  fill: #022B52;
+}
+
+.nav-link {
+  font-size: 0.5em;
+  font-family: urbane-rounded, sans-serif;
+  font-weight: 300;
+  color: #d2cdc6;
+  display: block;
+}
+
+svg {
+  fill: #BCC7D1;
+}
+
+svg {
+  margin: 0 auto;
+}
+
+.menu-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 9%;
 }
 
 /* ---------- page styling ---------- */
@@ -208,9 +211,10 @@ form {
 /* ---------- Welcome page end David ---------- */
 
 /* ---------- First onboarding start David ---------- */
-.visitdenmark-logo{
+.visitdenmark-logo {
   padding-top: 20%;
 }
+
 .heading-on-onboarding1 {
   font-size: 20px;
   font-weight: bold;
@@ -399,14 +403,17 @@ form {
 }
 
 #fetched-placesToEat,
-#fetched-activities {
+#fetched-activities,
+#searchedData {
   display: flex;
   flex-wrap: wrap;
   row-gap: 109x;
   column-gap: 19px;
-
 }
 
+.searchedresult {
+  margin-top: 24px;
+}
 
 
 .img-places {
@@ -621,152 +628,166 @@ form {
 
 /* ---------- Main page Iurie ---------- */
 
-.arhus_txt{
-  color:#E70013 ;
+.arhus_txt {
+  color: #E70013;
 }
-.pages{
-  
+
+.pages {
+
   margin-left: 1.5rem;
   text-align: start;
 }
 
-#products-container  {
+#products-container {
   text-align: center;
   display: flex;
   gap: 10px;
-  margin-top: 20px ;
- font-size: 3vw;
-overflow-x: auto;
--ms-overflow-style: none;  /* IE and Edge */
-scrollbar-width: none; 
-  }
+  margin-top: 20px;
+  font-size: 3vw;
+  overflow-x: auto;
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+}
 
-  #products-container::-webkit-scrollbar {
-    display: none;
-  }
-  .item1{
+#products-container::-webkit-scrollbar {
+  display: none;
+}
+
+.item1 {
   min-width: 100px;
-  background-color:#FFE882 ;
+  background-color: #FFE882;
   min-height: 100px;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
-   
-  }
-  .item2{
-    min-width: 100px;
-    background-color:#C3EBFF ;
+
+
+}
+
+.item2 {
+  min-width: 100px;
+  background-color: #C3EBFF;
   min-height: 80px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
-    }
-    .item3{
-     min-width: 100px;
-      background-color:#A3EABF ;
+
+}
+
+.item3 {
+  min-width: 100px;
+  background-color: #A3EABF;
   min-height: 100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
-      }
-      .item4{
-        min-width: 100px;
-        background-color:#FAC5CC ;
+
+}
+
+.item4 {
+  min-width: 100px;
+  background-color: #FAC5CC;
   min-height: 100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
-        }
 
-      .h1_style{
-        color: #022B52;
-      }
+}
+
+.h1_style {
+  color: #022B52;
+}
 
 
 
-.popular_container{
+.popular_container {
   display: flex;
-  min-width: 250px ;
- height: 50px;
- background-color:#F9F9F9 ;
+  min-width: 250px;
+  height: 50px;
+  background-color: #F9F9F9;
 
 
 
 }
-#popular_cards{
+
+#popular_cards {
   display: flex;
   overflow-x: auto;
   gap: 10px;
-  -ms-overflow-style: none;  
-  scrollbar-width: none; 
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 
 }
 
-.img-pop{
+.img-pop {
   max-width: 100%;
   max-height: 100%;
 }
-.pop-title{
+
+.pop-title {
   font-size: 2vw;
 }
-.pop-description{
+
+.pop-description {
   font-size: 2vw;
   align-self: flex-end;
 }
-.pop_txt_style{
+
+.pop_txt_style {
   margin-left: 10px;
 
 }
 
-.placeslike-container{
+.placeslike-container {
   display: flex;
-  
+
 }
 
-#placesYouLike{
+#placesYouLike {
   display: flex;
   overflow-x: auto;
   gap: 100px;
-  -ms-overflow-style: none; 
+  -ms-overflow-style: none;
   scrollbar-width: none;
-  
+
 }
-.like_container{
+
+.like_container {
   display: flex;
-  width: 190px ;
- flex-direction: column;
+  width: 190px;
+  flex-direction: column;
 }
 
 #placesYouLike::-webkit-scrollbar {
   display: none;
 
 }
+
 #popular_cards::-webkit-scrollbar {
   display: none;
 
 }
-.img-like{
+
+.img-like {
   width: 50vw;
   height: 50vw;
-  
+
 }
 
 
-.like-title{
+.like-title {
   font-size: 16px;
 }
-.like-description{
+
+.like-description {
   font-size: 12px;
-  
+
   margin-top: -5px;
 }
 
@@ -1022,7 +1043,7 @@ scrollbar-width: none;
 
 /* ---------- Edit page david ---------- */
 
-.favorites-edit-page-div{
+.favorites-edit-page-div {
   padding-top: 10%;
   padding-bottom: 30%;
   width: 85%;
@@ -1030,17 +1051,17 @@ scrollbar-width: none;
 }
 
 
-.favorites-heading-edit-page{
+.favorites-heading-edit-page {
   display: flex;
   flex-direction: row;
-  justify-content: center; 
+  justify-content: center;
   float: right;
   padding-right: 25%;
   margin-top: 3%;
 }
 
-#edit-page .apply-button{
-background-color: #022B52;
+#edit-page .apply-button {
+  background-color: #022B52;
   font-family: VisitDenmark Medium;
   font-size: 16px;
   text-align: center;
@@ -1050,7 +1071,7 @@ background-color: #022B52;
   color: white !important;
 }
 
-#edit-page .cancel-button{
+#edit-page .cancel-button {
   background-color: #F9F9F9;
   font-family: VisitDenmark Medium;
   font-size: 16px;
@@ -1061,16 +1082,16 @@ background-color: #022B52;
   color: #000C17;
 }
 
-#edit-page .apply-cancel-button-div{
+#edit-page .apply-cancel-button-div {
   justify-content: space-between;
 }
 
-#edit-page .date-event-div-edit-page{
+#edit-page .date-event-div-edit-page {
   padding-bottom: 10%;
 }
 
-.input{
-  border-top:none;
+.input {
+  border-top: none;
   border-left: none;
   border-right: none;
   border-bottom: 1px solid #CFD2D3;
@@ -1078,22 +1099,22 @@ background-color: #022B52;
   font-size: 20px;
 }
 
-#edit-page .event-div{
+#edit-page .event-div {
   width: 50%;
 }
 
-.trash-div{
- margin-top: 10%; 
- background-color: #FAFAFA;
+.trash-div {
+  margin-top: 10%;
+  background-color: #FAFAFA;
 }
 
 /* ---------- Profile page david ---------- */
-.profile{
+.profile {
   padding-top: 5%;
   font-size: 24px;
 }
 
-.plus{
+.plus {
   width: 80px;
   height: 80px;
   border-radius: 50%;
@@ -1106,11 +1127,11 @@ background-color: #022B52;
   margin-top: 5%;
 }
 
-.name{
- font-size: 12px;
+.name {
+  font-size: 12px;
 }
 
-.do-you-like{
+.do-you-like {
   background-color: #fafafa;
   width: 80%;
   margin: 0 auto;
@@ -1118,27 +1139,27 @@ background-color: #022B52;
   margin-bottom: 20%;
 }
 
-.h-p-div{
+.h-p-div {
   display: flex;
   flex-direction: column;
   text-align: left;
 }
 
-.do-you-like-heading{
+.do-you-like-heading {
   font-size: 20px;
 }
 
-.recommend{
+.recommend {
   font-size: 12px;
 }
 
-.social-illustration{
+.social-illustration {
   float: left;
   padding-top: 10%;
   padding-right: 5%;
 }
 
-.right-arrow{
+.right-arrow {
   float: right;
 }
 
@@ -1146,35 +1167,40 @@ background-color: #022B52;
 /* ---------- toogle switch david ---------- */
 
 .switch {
- display: flex;
- flex-direction: row;
- justify-content: space-between;
- width: 80%;
- margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
 
 }
+
 .switch input[type=checkbox] {
   height: 0;
   width: 0;
   visibility: hidden;
 }
-.switch input[type=checkbox]:checked + label {
+
+.switch input[type=checkbox]:checked+label {
   background: #022b52;
 }
-.switch input[type=checkbox]:checked + label::after {
+
+.switch input[type=checkbox]:checked+label::after {
   left: calc(100% - 4px);
   transform: translateX(-100%);
 }
+
 .switch label {
   cursor: pointer;
   width: 48px;
   height: 24px;
-  background:#f9f9f9;
+  background: #f9f9f9;
   display: block;
   border-radius: 24px;
   position: relative;
   top: 16px;
 }
+
 .switch label::after {
   content: "";
   position: absolute;
@@ -1182,48 +1208,38 @@ background-color: #022B52;
   left: 4px;
   width: 16px;
   height: 16px;
-  background:#BCC7D1;
+  background: #BCC7D1;
   border-radius: 16px;
   transition: 0.3s;
 }
 
-.language{
+.language {
   width: 80%;
   margin: 0 auto;
   margin-bottom: 20%;
 }
-.language-p{
+
+.language-p {
   float: left;
 }
 
-.flag{
+.flag {
   width: 24px;
   height: 16px;
   padding-top: 15%;
   padding-right: 10%;
 }
 
-.flag-english-div{
-display: flex;
-flex-direction: row;
-float: right;
+.flag-english-div {
+  display: flex;
+  flex-direction: row;
+  float: right;
 }
 
-.links{
+.links {
   display: flex;
   flex-direction: row;
   width: 80%;
   margin: 0 auto;
   justify-content: space-between;
 }
-
-
-
-
-
-
-
-
-
-
-

@@ -57,6 +57,29 @@ function appendPlacesToEat(placesToEat) {
   document.querySelector('#fetched-placesToEat').innerHTML = htmlTemplate;
 }
 
+function appendSearchedData(placesToEat) {
+  let htmlTemplate = "";
+  for (let placeToEat of placesToEat) {
+    // for (let placeToEatFile of placeToEat.Files) {
+    for (let i in placeToEat.Files) {
+      let found = placeToEat.Files[0]["Uri"];
+      htmlTemplate += /*html*/ `
+      <div class="places-container">
+        <div div onclick = "showDetailView(${placeToEat.Id}); navigateTo('detailedview');" class="places-box" >
+          <img src="${found}" class="img-places">
+          <p class="place-title">${placeToEat.Name}</p>
+          <p class="place-description">${placeToEat.Address.AddressLine1}</p>
+          <p class="place-description">${placeToEat.Category.Name}</p>
+        </div> 
+        ${generateFavPlacesButton2(placeToEat.Id)}  
+      </div>
+    `;
+      break;
+    }
+  }
+  document.querySelector('#searchedData').innerHTML = htmlTemplate;
+}
+
 function appendActivities(placesToEat) {
   let htmlTemplate = "";
   for (let placeToEat of placesToEat) {
@@ -174,6 +197,25 @@ function searchPlacesToEat(value) {
     }
   }
   appendPlacesToEat(filteredProducts);
+}
+
+function searchedData(value) {
+  let searchitem = document.querySelector("#searchedData");
+  if (value == "") {
+    searchitem.style.display = "none";
+  } else {
+    searchitem.style.display = "flex";
+    let searchQuery = value.toLowerCase();
+    let filteredProducts = [];
+    for (let place of _places) {
+      let name = place.Name.toLowerCase();
+
+      if (name.includes(searchQuery)) {
+        filteredProducts.push(place);
+      }
+    }
+    appendSearchedData(filteredProducts);
+  }
 }
 
 function searchActivities(value) {
@@ -424,6 +466,9 @@ function goBack() {
 function passvalues() {
   var listname = document.getElementById("txt").value;
   localStorage.setItem("textvalue", listname);
+  document.getElementById("wishlist").innerHTML =
+    localStorage.getItem("textvalue");
+
   return false;
 }
 
