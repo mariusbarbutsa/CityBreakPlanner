@@ -627,6 +627,10 @@ form {
 
 
 /* ---------- Main page Iurie ---------- */
+.home-header {
+  font-family: VisitDenmark Regular;
+  font-size: 32px;
+}
 
 .arhus_txt {
   color: #E70013;
