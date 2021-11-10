@@ -33,7 +33,7 @@
         <button class="welcome-page-done-button btn" type="button" onclick="navigateTo('onboarding-1');">
           Done
         </button>
-        <button class="welcome-page-skip-button btn" type="button" onclick="navigateTo('onboarding-1');">
+        <button class="welcome-page-skip-button btn" type="button" onclick="navigateTo('home');">
           Skip
         </button>
       </div>
@@ -483,7 +483,7 @@
     </div>
   </section>
 
-  <!-- bookmarks page David -->
+   <!-- bookmarks page David -->
   <section id="bookmarks" class="page">
 
     <div class="favorites-edit-div">
@@ -495,7 +495,7 @@
 
     <div class="container">
       <div class="question">
-        <button class="accordion">Wishlist</button>
+        <button id="wishlist" class="accordion">Wishlist</button>
         <div class="panel">
           <div class="wishlist-content">
 
@@ -558,10 +558,118 @@
   </section>
   <!-- Edit the lists page David -->
   <section id="edit-page" class="page">
+    
+<div class="favorites-edit-page-div">
+      <h2 class="favorites-heading-edit-page">Favourites</h2>
+      <img class="back-icon-detailedview" src="/img/icons/back-icon.svg" alt="back icon"
+      onclick="navigateTo('bookmarks');" />
+    </div>
+<form>
+  <div class="input-trash">
+    <input class="input" type="text" id="txt" placeholder="Wishlist"/>
+    <img src="./img/trash.png" alt="trash" class="trash">
+</div>
 
+<div class="input-trash">
+    <input class="input" type="text" id="txt" placeholder="Custom list"/>
+    <img src="./img/trash.png" alt="trash" class="trash">
+</div>
+
+<div class="input-trash">
+    <input class="input" type="text" id="txt" placeholder="Places to visit"/>
+    <img src="./img/trash.png" alt="trash" class="trash">
+</div>
+
+    <div class="upcoming-events-div">
+      <h2 class="upcoming-events-heading">Upcoming events</h2>
+    </div>
+
+    <div class="date-event-div">
+
+      <div class="date-div">
+        <p>May</p>
+        <p>14</p>
+      </div>
+
+      <div class="event-div">
+        <p class="event-name">Tour de Femme</p>
+        <p class="event-location">I og omkring Aarhus, Aarhus C</p>
+      </div>
+
+      <div class="trash-div">
+        <img src="./img/trash.png" alt="trash" class="trash-on-event">
+      </div>
+
+    </div>
+
+    <div class="date-event-div date-event-div-edit-page">
+
+      <div class="date-div">
+        <p>May</p>
+        <p>14</p>
+      </div>
+
+      <div class="event-div">
+        <p class="event-name">Tour de Femme</p>
+        <p class="event-location">I og omkring Aarhus, Aarhus C</p>
+      </div>
+
+      <div class="trash-div">
+        <img src="./img/trash.png" alt="trash" class="trash-on-event">
+      </div>
+
+    </div>
+
+    <div class="apply-cancel-button-div">
+      <input class="cancel-button" type="button" value="Cancel" onclick="navigateTo('bookmarks');">
+    <input class="apply-button" type="submit" value="Apply" onclick="passvalues(); navigateTo('bookmarks'); window.location.reload();"/>
+    </div>
+</form>
+    
   </section>
   <!-- Profile page -->
-  <section id="profile" class="page"></section>
+  <section id="profile" class="page">
+    <h2 class="profile">Profile</h2>
+    <div class="plus">+</div>
+    <p class="name">Name Surname</p>
+
+    <div class="do-you-like">
+      <img src="./img/social-illustration.png" alt="social-illustration" class="social-illustration">
+      <div class="h-p-div">
+      <h4 class="do-you-like-heading">Do you like our app?</h4>
+      <p class="recommend">Recommend it now</p>
+      </div>
+      <img src="./img/right-arrow.png" alt="right-arrow" class="right-arrow">
+    </div>
+
+<div class="switch">
+  <p>Recommendation alert</p>
+  <input type="checkbox" id="toggleAll" />
+  <label for="toggleAll"></label>
+</div> 
+
+<div class="language">
+<p class="language-p">Language</p>
+<div class="flag-english-div">
+<img src="./img/flag.png" alt="flag" class="flag">
+<p class="english">English</p>
+</div>
+</div>
+
+<div class="links">
+<p>Privacy and Policy</p>
+
+</div>
+<div class="links">
+<p>Terms & Conditions</p>
+
+</div>
+<div class="links">
+<p>Support</p>
+
+</div>
+
+  </section>
 
   <!-- SPA functionality  -->
   <script script src="/js/spa.js"></script>

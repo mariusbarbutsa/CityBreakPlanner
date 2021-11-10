@@ -418,3 +418,14 @@ for (i = 0; i < acc.length; i++) {
 function goBack() {
   window.history.back();
 }
+
+// edit list name David
+
+function passvalues() {
+  var listname = document.getElementById("txt").value;
+  localStorage.setItem("textvalue", listname);
+  return false;
+}
+
+document.getElementById("wishlist").innerHTML =
+  localStorage.getItem("textvalue");
