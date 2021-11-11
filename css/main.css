@@ -50,7 +50,8 @@ html {
 }
 
 body {
-  margin: 0;
+  margin: 0 auto;
+  max-width: 375px;
 }
 
 h1 {
@@ -390,6 +391,21 @@ form {
   text-indent: 18px;
 }
 
+.explore-search2 {
+  -webkit-appearance: none;
+  width: 100%;
+  max-width: 327px;
+  padding: 12px 15px;
+  box-sizing: border-box;
+  display: block;
+  background: #f9f9f9;
+  border: 0;
+  background-image: url("/img/icons/magnifier.svg");
+  background-position: 12px center;
+  background-repeat: no-repeat;
+  text-indent: 18px;
+}
+
 ::placeholder {
   font-size: 12px;
 }
@@ -636,9 +652,20 @@ form {
 .home-header {
   font-family: VisitDenmark Regular;
   font-size: 32px;
+  margin: 0;
+  margin-bottom: 16px;
+}
+
+.home-regular {
+  font-family: VisitDenmark Regular;
+  font-size: 12px;
+  line-height: 0;
+  margin-bottom: 4px;
+  margin-top: 24px;
 }
 
 .arhus_txt {
+  font-family: VisitDenmark SemiBold;
   color: #E70013;
 }
 
