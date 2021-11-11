@@ -290,7 +290,9 @@ form {
 
 /* ---------- Fourth onboarding start David ---------- */
 .onboarding4-image {
-  width: 60%;
+  width: 327px;
+  height: 268px;
+  padding-top: 45%;
 }
 
 .onboarding4-text {
@@ -303,6 +305,7 @@ form {
 .get-started-button {
   background-color: #022b52;
   color: #ffff;
+  margin-top: 15%;
 }
 
 /* ---------- Fourth onboarding end David ---------- */
