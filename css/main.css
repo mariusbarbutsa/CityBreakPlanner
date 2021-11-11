@@ -639,6 +639,11 @@ form {
   color: #E70013;
 }
 
+.icon-activity {
+  width: 60px;
+  height: 50px;
+}
+
 .pages {
 
   margin-left: 1.5rem;
