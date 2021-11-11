@@ -3,12 +3,12 @@
 
 <head>
   <meta charset="utf-8" />
-  <title>Products</title>
+  <title>City Break Planner</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <meta name="description" content="Product Single Page Application" />
-  <meta name="author" content="Rasmus Cederdorff" />
+  <meta name="author" content="City break planner" />
   <link rel="stylesheet" href="css/main.css" />
-  <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+  <link rel="shortcut icon" type="image/png" href="" />
 </head>
 
 <body onhashchange="pageChange()">
@@ -50,7 +50,7 @@
   <!-- Onboarding pages David -->
   <!-- Welcome page start -->
   <section id="welcome-page" class="page">
-    <img src="/img/Icon awesome-tripadvisor.png" class="logo-welcome-screen" />
+    <img src="/img/logogo.svg" class="logo-welcome-screen" />
     <h1 class="welcome-text">
       Welcome to<br />
       City Break Planner
@@ -98,7 +98,7 @@
 
   <!-- Second Onboarding start -->
   <section id="onboarding-2" class="page">
-    <img src="./img/onboarding2-image.png" class="onboarding2-image" alt="" />
+    <img src="./img/onboard1.svg" class="onboarding2-image" alt="" />
     <p class="onboarding2-text">
       Start to search for activities, <br />places to eat, attractions or
       events!
@@ -120,7 +120,7 @@
 
   <!-- Third Onboarding start -->
   <section id="onboarding-3" class="page">
-    <img src="./img/onboarding3-image.png" class="onboarding3-image" alt="" />
+    <img src="./img/onboard2.svg" class="onboarding3-image" alt="" />
     <p class="onboarding3-text">
       Search and filter<br />
       The search results, to find<br />
@@ -143,7 +143,7 @@
 
   <!-- Fourth Onboarding start -->
   <section id="onboarding-4" class="page">
-    <img src="./img/onboarding4-image.png" class="onboarding3-image" alt="" />
+    <img src="./img/onboard3.svg" class="onboarding4-image" alt="" />
     <p class="onboarding4-text">
       Add the favourite ones<br> to your calendar.
     </p>
@@ -166,12 +166,8 @@
     <section id="searchedData" class="searchedresult"></section>
     <!-- <button type="button" name="button" onclick="hideOutOfStock()">Hide out of stock</button> -->
     <section id="products-container">
-      <div class="item1" onclick="navigateTo('placestoeat')"><svg xmlns="http://www.w3.org/2000/svg" width="32.003"
-          height="36.444" viewBox="0 0 32.003 36.444">
-          <path id="Icon_material-event-note" data-name="Icon material-event-note"
-            d="M29.391,17.9H11.612v3.644h17.78ZM32.947,5.144H31.169V1.5H27.613V5.144H13.39V1.5H9.834V5.144H8.056A3.585,3.585,0,0,0,4.518,8.789L4.5,34.3a3.6,3.6,0,0,0,3.556,3.644H32.947A3.612,3.612,0,0,0,36.5,34.3V8.789A3.612,3.612,0,0,0,32.947,5.144Zm0,29.155H8.056V14.255H32.947Zm-8.89-9.111H11.612v3.644H24.057Z"
-            transform="translate(-4.5 -1.5)" fill="#dba200" />
-        </svg><br>
+      <div class="item1" onclick="navigateTo('placestoeat')">
+        <img src="img/eattrans.png" class="icon-activity">
         <p class="txt_card"> Places to eat</p>
       </div>
       <div class="item2" onclick="navigateTo('activities')"><svg xmlns="http://www.w3.org/2000/svg" width="32.003"
