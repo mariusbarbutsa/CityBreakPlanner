@@ -175,7 +175,7 @@ form {
 
 /* ---------- Welcome page start David ---------- */
 .logo-welcome-screen {
-  padding-top: 35%;
+  padding-top: 20%;
 }
 
 .welcome-text {
@@ -188,7 +188,6 @@ form {
 .input-onboarding {
   border: 15px solid #f9f9f9;
   background-color: #f9f9f9;
-  margin-bottom: 15%;
   margin-top: 10%;
   width: 70%;
 }
@@ -256,8 +255,10 @@ form {
 
 /* ---------- Second onboarding start David ---------- */
 .onboarding2-image {
-  padding-top: 35%;
+  padding-top: 20%;
   padding-bottom: 10%;
+  width: 340px;
+  height: 363px;
 }
 
 .onboarding2-text {
@@ -271,8 +272,10 @@ form {
 
 /* ---------- Third onboarding start David ---------- */
 .onboarding3-image {
-  padding-top: 30%;
+  padding-top: 20%;
   padding-bottom: 10%;
+  width: 217px;
+  height: 343px;
 }
 
 .onboarding3-text {
@@ -286,8 +289,7 @@ form {
 
 /* ---------- Fourth onboarding start David ---------- */
 .onboarding4-image {
-  padding-top: 15%;
-  padding-bottom: 10%;
+  width: 60%;
 }
 
 .onboarding4-text {
