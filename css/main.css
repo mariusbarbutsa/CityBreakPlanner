@@ -175,7 +175,8 @@ form {
 
 /* ---------- Welcome page start David ---------- */
 .logo-welcome-screen {
-  padding-top: 20%;
+  padding-top: 15%;
+  width: 70%;
 }
 
 .welcome-text {
